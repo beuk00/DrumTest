@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DrumAPI\DrumAPI.csproj" />
+    <ProjectReference Include="..\DrumLib\DrumLib.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,89 @@
+﻿@model CreateEditDrumKitViewModel
+
+<h1>@Html.Raw((Model == null || Model.Id == 0) ? "Create" : "Edit")</h1>
+
+<form asp-controller="DrumKit" asp-action="CreateEditDrumKit" method="post">
+    @if (Model != null)
+    {
+        <div class="form-group">
+            <input type="hidden" value="@Model.Id" name="Id"/>
+        </div>
+    }
+    <div class="form-group">
+        <label asp-for="DrumKitName"></label>
+        <input asp-for="DrumKitName" class="form-control"/>
+        <span asp-validation-for="DrumKitName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ClosedHiHatId"></label>
+        <select asp-for="ClosedHiHatId" class="form-control" asp-items="Model.ClosedHiHats">
+            <option Value="">Select a ClosedHiHat</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="OpenHiHatId"></label>
+        <select asp-for="OpenHiHatId" class="form-control" asp-items="Model.OpenHiHats">
+            <option Value="">Select a OpenHiHat</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CrashCymbalId"></label>
+        <select asp-for="CrashCymbalId" class="form-control" asp-items="Model.CrashCymbals">
+            <option Value="">Select a CrashCymbal</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FloorTomId"></label>
+        <select asp-for="FloorTomId" class="form-control" asp-items="Model.FloorToms">
+            <option Value="">Select a FloorTom</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HighTomId"></label>
+        <select asp-for="HighTomId" class="form-control" asp-items="Model.HighToms">
+            <option Value="">Select a HighTom</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HiHatControllerId"></label>
+        <select asp-for="HiHatControllerId" class="form-control" asp-items="Model.HiHatControllers">
+            <option Value="">Select a HiHatController</option>
+        </select>
+    </div>
+
+     <div class="form-group">
+        <label asp-for="KickId"></label>
+        <select asp-for="KickId" class="form-control" asp-items="Model.Kicks">
+            <option Value="">Select a Kick</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MidTomId"></label>
+        <select asp-for="MidTomId" class="form-control" asp-items="Model.MidToms">
+            <option Value="">Select a MidTom</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RideCymbalId"></label>
+        <select asp-for="RideCymbalId" class="form-control" asp-items="Model.RideCymbals">
+            <option Value="">Select a RideCymbal</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SnareDrumId"></label>
+        <select asp-for="SnareDrumId" class="form-control" asp-items="Model.SnareDrums">
+            <option Value="">Select a SnareDrum</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">@Html.Raw((Model == null || Model.Id == 0) ? "Create" : "Update")</button>
+</form>

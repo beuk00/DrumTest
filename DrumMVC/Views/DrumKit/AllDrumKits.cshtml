@@ -1,0 +1,26 @@
+﻿@model DrumKitOverviewViewModel
+
+<h1>DrumKits:</h1>
+<br />
+<a asp-controller="DrumKit" asp-action="Create" class="btn btn-primary">Create New</a>
+<br />
+<table class="table table-bordered mt-2">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>DrumKit Name</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kit in @Model.DrumKits)
+       {
+            <tr>
+                <td>@kit.Id</td>
+                <td>@kit.Name</td>
+                <td><a asp-controller="DrumKit" asp-action="Delete" asp-route-id="@kit.Id">Delete</a></td>
+                <td><a asp-controller="DrumKit" asp-action="Edit" asp-route-id="@kit.Id">Edit</a></td>
+            </tr> 
+       }
+    </tbody>
+</table>

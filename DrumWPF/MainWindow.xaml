@@ -1,0 +1,120 @@
+﻿<Window x:Class="DrumWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrumWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnClosesHH" Content="ClosesHH" HorizontalAlignment="Left" Margin="10,44,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnClosesHH_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnCrashCymbal" Content="CrashCymbal" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.514,0.253" Width="130" ClickMode="Press" PreviewMouseLeftButtonDown="btnCrashCymbal_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnFloorTom" Content="FloorTom" HorizontalAlignment="Left" Margin="10,69,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnFloorTom_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnHighTom" Content="HighTom" HorizontalAlignment="Left" Margin="10,244,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnHighTom_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnHiHatController" Content="HiHatController" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnHiHatController_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnKick"  Content="Kick" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.538,1.856" PreviewMouseLeftButtonDown="btnKick_PreviewMouseLeftButtonDown_1"/>
+        <Button x:Name="btnMidTom" Content="MidTom" HorizontalAlignment="Left" Margin="10,169,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnMidTom_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnOpenHiHat" Content="OpenHiHat" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnOpenHiHat_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnRideCymbal" Content="RideCymbal" HorizontalAlignment="Left" Margin="10,219,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnRideCymbal_PreviewMouseLeftButtonDown"/>
+        <Button x:Name="btnSnareDrum" Content="SnareDrum" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="130" PreviewMouseLeftButtonDown="btnSnareDrum_PreviewMouseLeftButtonDown"/>
+        <ComboBox Name="cmbCrashCymbal" ItemsSource="{Binding CrashCymbals}" HorizontalAlignment="Left" Margin="230,15,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.408">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbDrumKit" ItemsSource="{Binding DrumKits}" HorizontalAlignment="Left" Margin="215,319,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbClosedHiHat" ItemsSource="{Binding ClosedHiHats}" HorizontalAlignment="Left" Margin="230,42,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbFloorTom" ItemsSource="{Binding FloorToms}" HorizontalAlignment="Left" Margin="230,67,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbOpenHiHat" ItemsSource="{Binding OpenHiHats}" HorizontalAlignment="Left" Margin="230,92,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbSnareDrum" ItemsSource="{Binding SnareDrums}" HorizontalAlignment="Left" Margin="230,117,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbHiHatController" ItemsSource="{Binding HiHatControllers}" HorizontalAlignment="Left" Margin="230,142,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbMidTom" ItemsSource="{Binding MidToms}" HorizontalAlignment="Left" Margin="230,167,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox x:Name="cmbKick" ItemsSource="{Binding Kicks}" HorizontalAlignment="Left" Margin="230,192,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbRideCymbal" ItemsSource="{Binding RideCymbals}" HorizontalAlignment="Left" Margin="230,217,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <ComboBox Name="cmbHighTom" ItemsSource="{Binding HighToms}" HorizontalAlignment="Left" Margin="230,244,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <Label Content="{Binding Name}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </Grid>
+</Window>
