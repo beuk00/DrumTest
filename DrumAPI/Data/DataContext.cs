@@ -127,8 +127,9 @@ namespace DrumAPI.Data
             {
                 new DrumKit
                 {
-                    Id = 1,
+
                     Name = "Standard",
+                    Id = 1,
                     ClosedHiHatId = 1,
                     OpenHiHatId = 1,
                     CrashCymbalId = 1,
@@ -139,7 +140,7 @@ namespace DrumAPI.Data
                     MidTomId = 1,
                     RideCymbalId = 1,
                     SnareDrumId = 1,
-                    
+
                 }
             };
 

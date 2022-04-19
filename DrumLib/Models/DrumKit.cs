@@ -7,9 +7,13 @@ namespace DrumLib.Models
 {
     public class DrumKit : BaseModel
     {
-        public DrumKit()
+        public DrumKit(//string name, int id, SnareDrum snareDrum, Kick kick, OpenHiHat openHiHat,
+        //                ClosedHiHat closedHiHat, HiHatController hiHatController, HighTom highTom, MidTom midTom, FloorTom floorTom,
+        //                CrashCymbal crash, RideCymbal ride
+                       )
         {
-
+            //Name = name;
+            //Id = id;
         }
 
         public int ClosedHiHatId { get; set; }

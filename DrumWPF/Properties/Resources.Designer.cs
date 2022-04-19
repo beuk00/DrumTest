@@ -59,7 +59,107 @@ namespace DrumWPF.Properties {
                 resourceCulture = value;
             }
         }
-        
+
+        internal static string HighT = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream highT
+        {
+            get
+            {
+                return ResourceManager.GetStream(HighT, resourceCulture);
+            }
+        }
+
+        internal static string MidT = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream midT
+        {
+            get
+            {
+                return ResourceManager.GetStream(MidT, resourceCulture);
+            }
+        }
+
+        internal static string FloorT = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream floorT
+        {
+            get
+            {
+                return ResourceManager.GetStream(FloorT, resourceCulture);
+            }
+        }
+
+        internal static string OHiHat = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream oHiHat
+        {
+            get
+            {
+                return ResourceManager.GetStream(OHiHat, resourceCulture);
+            }
+        }
+
+        internal static string CHiHat = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream cHiHat
+        {
+            get
+            {
+                return ResourceManager.GetStream(CHiHat, resourceCulture);
+            }
+        }
+
+        internal static string HiHatPedal = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream hiHatPedal
+        {
+            get
+            {
+                return ResourceManager.GetStream(HiHatPedal, resourceCulture);
+            }
+        }
+
+        internal static string KickD = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream kickD
+        {
+            get
+            {
+                return ResourceManager.GetStream(KickD, resourceCulture);
+            }
+        }
+
+        internal static string Snare = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream snare
+        {
+            get
+            {
+                return ResourceManager.GetStream(Snare, resourceCulture);
+            }
+        }
+
+        internal static string CrashCym = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream crashCym
+        {
+            get
+            {
+                return ResourceManager.GetStream(CrashCym, resourceCulture);
+            }
+        }
+
+        internal static string RideCym = string.Empty;
+
+        internal static System.IO.UnmanagedMemoryStream rideCym
+        {
+            get
+            {
+                return ResourceManager.GetStream(RideCym, resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>

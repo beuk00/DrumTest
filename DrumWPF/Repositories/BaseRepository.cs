@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DrumWPF.Repositories
 {
-    internal abstract class BaseRepository<T> : IRepository<T> where T : BaseModel
+    public abstract class BaseRepository<T> : IRepository<T> where T : BaseModel
     {
        
             //protected string baseUrl = "https://localhost:44369/api/";

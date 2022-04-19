@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DrumWPF
 {
-    internal class WpfContext : INotifyPropertyChanged
+    public class WpfContext : INotifyPropertyChanged
     {
         private readonly CrashCymbalRepository _crashCymbalRepository = new CrashCymbalRepository();
         private readonly FloorTomRepository _floorTomRepository = new FloorTomRepository();
