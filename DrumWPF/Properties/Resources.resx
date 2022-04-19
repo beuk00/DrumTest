@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Bass-Drum-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Bass-Drum-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Bass-Drum-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Bass-Drum-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Bass-Drum-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Bass-Drum-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Boom-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Boom-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Closed-Hi-Hat-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Closed-Hi-Hat-7.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-1 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-1 (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-7.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-8.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Crash-Cymbal-9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Crash-Cymbal-9.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Deep-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Deep-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Dry-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Dry-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E-Mu-Proteus-FX-Wacky-Crash-Cymbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\E-Mu-Proteus-FX-Wacky-Crash-Cymbal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E-Mu-Proteus-FX-Wacky-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\E-Mu-Proteus-FX-Wacky-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E-Mu-Proteus-FX-Wacky-Ride-Cymbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ride\E-Mu-Proteus-FX-Wacky-Ride-Cymbal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="E-Mu-Proteus-FX-Wacky-Snare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\E-Mu-Proteus-FX-Wacky-Snare.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electro-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Electro-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Kick-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Electronic-Kick-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Kick-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Electronic-Kick-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Kick-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Electronic-Kick-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Tom-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Electronic-Tom-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Tom-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Electronic-Tom-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Tom-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Electronic-Tom-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Electronic-Tom-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Electronic-Tom-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Hi-Mid-Synth-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Ensoniq-ESQ-1-Hi-Mid-Synth-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Hi-Synth-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Ensoniq-ESQ-1-Hi-Synth-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Low-Mid-Synth-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Ensoniq-ESQ-1-Low-Mid-Synth-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Low-Synth-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Ensoniq-ESQ-1-Low-Synth-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Snare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Ensoniq-ESQ-1-Snare.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-ESQ-1-Snare-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Ensoniq-ESQ-1-Snare-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Closed-Hi-Hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat closed\Ensoniq-SQ-1-Closed-Hi-Hat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Crash-Cymbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crash\Ensoniq-SQ-1-Crash-Cymbal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Open-Hi-Hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Ensoniq-SQ-1-Open-Hi-Hat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Ride-Cymbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ride\Ensoniq-SQ-1-Ride-Cymbal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Rock-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Ensoniq-SQ-1-Rock-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-1-Side-Stick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Ensoniq-SQ-1-Side-Stick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-SQ-80-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Ensoniq-SQ-80-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-VFX-SD-Kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Ensoniq-VFX-SD-Kick.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-VFX-SD-Ride-Cymbal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ride\Ensoniq-VFX-SD-Ride-Cymbal.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Ensoniq-VFX-SD-Snare" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Ensoniq-VFX-SD-Snare.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Floor-Tom-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Floor-Tom-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Floor-Tom-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Floor-Tom-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Floor-Tom-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Floor-Tom-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Floor-Tom-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Floor-Tom-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hi-Tom-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Hi-Tom-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hi-Tom-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Hi-Tom-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hi-Tom-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Hi-Tom-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hi-Tom-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Hi-Tom-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Hip-Hop-Snare-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Hip-Hop-Snare-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Industrial-Kick-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kick\Industrial-Kick-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Low-Tom-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Low-Tom-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Low-Tom-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Low-Tom-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Low-Tom-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Low-Tom-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Low-Tom-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Low-Tom-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Low-Tom-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Low-Tom-5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mid-Tom-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Mid-Tom-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mid-Tom-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Mid-Tom-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mid-Tom-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Mid-Tom-3.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mid-Tom-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Mid-Tom-5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mid-Tom-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Mid-Tom-6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Noise-Snare-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Noise-Snare-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-4.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-5.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-6.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Open-Hi-Hat-7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat open\Open-Hi-Hat-7.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Pedal-Hi-Hat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat controller\Pedal-Hi-Hat-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Rim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Snare\Rim.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roland-R-8-Pedal-Hi-Hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat controller\Roland-R-8-Pedal-Hi-Hat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Roland-SC-88-Pedal-Hi-Hat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat controller\Roland-SC-88-Pedal-Hi-Hat.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tight-Floor-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Tight-Floor-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tight-High-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighTom\Tight-High-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tight-Low-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FloorTom\Tight-Low-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tight-Mid-Tom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MidTom\Tight-Mid-Tom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Yamaha-RM50-Pedal-Hi-Hat-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat controller\Yamaha-RM50-Pedal-Hi-Hat-1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Yamaha-RM50-Pedal-Hi-Hat-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HiHat controller\Yamaha-RM50-Pedal-Hi-Hat-2.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
