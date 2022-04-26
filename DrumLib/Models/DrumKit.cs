@@ -7,13 +7,24 @@ namespace DrumLib.Models
 {
     public class DrumKit : BaseModel
     {
-        public DrumKit(//string name, int id, SnareDrum snareDrum, Kick kick, OpenHiHat openHiHat,
-        //                ClosedHiHat closedHiHat, HiHatController hiHatController, HighTom highTom, MidTom midTom, FloorTom floorTom,
-        //                CrashCymbal crash, RideCymbal ride
+        public DrumKit(string name, int id, int snareDrumId, int kickId, int openHiHatId,
+                        int closedHiHatId, int hiHatControllerId, int highTomId, int midTomId, int floorTomId,
+                        int crashCymbalId, int rideCymbalId
                        )
         {
-            //Name = name;
-            //Id = id;
+            Name = name;
+            Id = id;
+            SnareDrumId = snareDrumId;
+            KickId = kickId;
+            OpenHiHatId = openHiHatId;
+            ClosedHiHatId = closedHiHatId;
+            HiHatControllerId = hiHatControllerId;
+            HighTomId = highTomId;
+            MidTomId = midTomId;
+            FloorTomId = floorTomId;
+            CrashCymbalId = crashCymbalId;
+            RideCymbalId = rideCymbalId;
+
         }
 
         public int ClosedHiHatId { get; set; }

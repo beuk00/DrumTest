@@ -9,6 +9,5 @@ namespace DrumLib.Models
     {
         public IEnumerable<DrumKit> DrumKits { get; set; }
 
-        public string FileLocation { get; set; }
     }
 }

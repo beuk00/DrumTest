@@ -107,21 +107,21 @@ namespace DrumMVC.Controllers
             if (ModelState.IsValid)
             {
                 DrumKit drumKit = new DrumKit
-                {
-                    Id = model.Id,
-                    Name = model.DrumKitName,
-                    ClosedHiHatId = model.ClosedHiHatId,
-                    OpenHiHatId = model.OpenHiHatId,
-                    CrashCymbalId = model.CrashCymbalId,
-                    FloorTomId = model.FloorTomId,
-                    HighTomId = model.HighTomId,
-                    HiHatControllerId = model.HiHatControllerId,
-                    KickId = model.KickId,
-                    MidTomId = model.MidTomId,
-                    RideCymbalId = model.RideCymbalId,
-                    SnareDrumId = model.SnareDrumId,
-                    
-                };
+                (
+                    name: model.DrumKitName,
+                    id : model.Id,
+                    snareDrumId: model.SnareDrumId,
+                    kickId: model.KickId,
+                    openHiHatId: model.OpenHiHatId,
+                    closedHiHatId : model.ClosedHiHatId,
+                    hiHatControllerId: model.HiHatControllerId,
+                    highTomId: model.HighTomId,
+                    midTomId: model.MidTomId,
+                    floorTomId: model.FloorTomId,
+                    crashCymbalId : model.CrashCymbalId,
+                    rideCymbalId: model.RideCymbalId
+
+                );
 
                 if (model.Id == 0)
                 {

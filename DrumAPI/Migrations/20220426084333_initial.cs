@@ -12,8 +12,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,8 +25,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -40,8 +38,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -54,8 +51,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -68,8 +64,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -82,8 +77,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,8 +90,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -110,8 +103,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -124,8 +116,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -138,8 +129,7 @@ namespace DrumAPI.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(nullable: false),
-                    FileLocation = table.Column<string>(nullable: false)
+                    Name = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -231,53 +221,53 @@ namespace DrumAPI.Migrations
 
             migrationBuilder.InsertData(
                 table: "ClosedHiHats",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHat closed/", "Closed-Hi-Hat-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Closed-Hi-Hat-1" });
 
             migrationBuilder.InsertData(
                 table: "CrashCymbals",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Crash/", "Crash-Cymbal-1 (1)" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Crash-Cymbal-1 (1)" });
 
             migrationBuilder.InsertData(
                 table: "FloorToms",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/FloorTom/", "Floor-Tom-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Floor-Tom-1" });
 
             migrationBuilder.InsertData(
                 table: "HiHatsControllers",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHatController/", "Pedal-Hi-Hat-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Pedal-Hi-Hat-1" });
 
             migrationBuilder.InsertData(
                 table: "HighToms",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HighTom/", "Hi-Tom-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Hi-Tom-1" });
 
             migrationBuilder.InsertData(
                 table: "Kicks",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Kick/", "Bass-Drum-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Bass-Drum-1" });
 
             migrationBuilder.InsertData(
                 table: "MidToms",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/MidTom/", "Mid-Tom-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Mid-Tom-1" });
 
             migrationBuilder.InsertData(
                 table: "OpenHiHats",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHat open/", "Open-Hi-Hat-1" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Open-Hi-Hat-1" });
 
             migrationBuilder.InsertData(
                 table: "RideCymbals",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Ride/", "Ensoniq-SQ-1-Ride-Cymbal" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Ensoniq-SQ-1-Ride-Cymbal" });
 
             migrationBuilder.InsertData(
                 table: "SnareDrums",
-                columns: new[] { "Id", "FileLocation", "Name" },
-                values: new object[] { 1, "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Snare/", "Ensoniq-ESQ-1-Snare" });
+                columns: new[] { "Id", "Name" },
+                values: new object[] { 1, "Ensoniq-ESQ-1-Snare" });
 
             migrationBuilder.InsertData(
                 table: "DrumKits",

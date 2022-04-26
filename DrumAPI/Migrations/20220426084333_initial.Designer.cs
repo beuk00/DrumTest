@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrumAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220419101902_initial")]
+    [Migration("20220426084333_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,10 +27,6 @@ namespace DrumAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -43,7 +39,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHat closed/",
                             Name = "Closed-Hi-Hat-1"
                         });
                 });
@@ -54,10 +49,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -71,7 +62,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Crash/",
                             Name = "Crash-Cymbal-1 (1)"
                         });
                 });
@@ -166,10 +156,6 @@ namespace DrumAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -182,7 +168,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/FloorTom/",
                             Name = "Floor-Tom-1"
                         });
                 });
@@ -193,10 +178,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -210,7 +191,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHatController/",
                             Name = "Pedal-Hi-Hat-1"
                         });
                 });
@@ -221,10 +201,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -238,7 +214,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HighTom/",
                             Name = "Hi-Tom-1"
                         });
                 });
@@ -249,10 +224,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -266,7 +237,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Kick/",
                             Name = "Bass-Drum-1"
                         });
                 });
@@ -277,10 +247,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -294,7 +260,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/MidTom/",
                             Name = "Mid-Tom-1"
                         });
                 });
@@ -305,10 +270,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -322,7 +283,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/HiHat open/",
                             Name = "Open-Hi-Hat-1"
                         });
                 });
@@ -333,10 +293,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -350,7 +306,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Ride/",
                             Name = "Ensoniq-SQ-1-Ride-Cymbal"
                         });
                 });
@@ -361,10 +316,6 @@ namespace DrumAPI.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FileLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -378,7 +329,6 @@ namespace DrumAPI.Migrations
                         new
                         {
                             Id = 1,
-                            FileLocation = "C:/Users/Tom/source/repos/DrumApp/DrumAPI/Resources/Snare/",
                             Name = "Ensoniq-ESQ-1-Snare"
                         });
                 });

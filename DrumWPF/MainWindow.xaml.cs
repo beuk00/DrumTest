@@ -25,11 +25,15 @@ namespace DrumWPF
     {
         WpfContext context = WpfContext.Instance;
         SoundPlayer snd = null;
+        List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
 
         public MainWindow()
         {
             InitializeComponent();
             DataContext = context;
+            cmbWhatToUse.ItemsSource = modes;
+            txtInput.Visibility = Visibility.Hidden;
+            
         }
 
         private void btnCrashCymbal_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -39,7 +43,7 @@ namespace DrumWPF
             if (crashC != null)
             {
 
-             Properties.Resources.CrashCym = crashC.Name;
+                Properties.Resources.CrashCym = crashC.Name;
                 snd = new SoundPlayer(Properties.Resources.crashCym);
             }
             else
@@ -215,28 +219,41 @@ namespace DrumWPF
             {
                 MessageBox.Show("Please enter a name for your Drumkit!");
             }
+            else if (cmbClosedHiHat.SelectedItem == null ||
+                cmbCrashCymbal.SelectedItem == null ||
+                cmbFloorTom.SelectedItem == null ||
+                cmbHighTom.SelectedItem == null ||
+                cmbHiHatController.SelectedItem == null ||
+                cmbKick.SelectedItem == null ||
+                cmbMidTom.SelectedItem == null ||
+                cmbOpenHiHat.SelectedItem == null ||
+                cmbRideCymbal.SelectedItem == null ||
+                cmbSnareDrum.SelectedItem == null)
+            {
+                MessageBox.Show("Please select all parts !");
+            }
             else if (MessageBox.Show("Are you sure you want to save DrumKit: " + txtSaveKit.Text + "?",
                     "Save Drumkit",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                //DrumKit drum = new DrumKit(
-                //    txtSaveKit.Text,
-                //    context.DrumKits.Count, 
-                //    (SnareDrum)cmbSnareDrum.SelectedItem, 
-                //    (Kick)cmbKick.SelectedItem, 
-                //    (OpenHiHat)cmbOpenHiHat.SelectedItem, 
-                //    (ClosedHiHat)cmbClosedHiHat.SelectedItem, 
-                //    (HiHatController)cmbHiHatController.SelectedItem, 
-                //    (HighTom)cmbHighTom.SelectedItem, 
-                //    (MidTom)cmbMidTom.SelectedItem, 
-                //    (FloorTom)cmbFloorTom.SelectedItem, 
-                //    (CrashCymbal)cmbCrashCymbal.SelectedItem, 
-                //    (RideCymbal)cmbRideCymbal.SelectedItem
-                //    );
+                DrumKit drum = new DrumKit(
+                    txtSaveKit.Text,
+                    context.DrumKits.Count,
+                    ((SnareDrum)cmbSnareDrum.SelectedItem).Id,
+                    ((Kick)cmbKick.SelectedItem).Id,
+                    ((OpenHiHat)cmbOpenHiHat.SelectedItem).Id,
+                    ((ClosedHiHat)cmbClosedHiHat.SelectedItem).Id,
+                    ((HiHatController)cmbHiHatController.SelectedItem).Id,
+                    ((HighTom)cmbHighTom.SelectedItem).Id,
+                    ((MidTom)cmbMidTom.SelectedItem).Id,
+                    ((FloorTom)cmbFloorTom.SelectedItem).Id,
+                    ((CrashCymbal)cmbCrashCymbal.SelectedItem).Id,
+                    ((RideCymbal)cmbRideCymbal.SelectedItem).Id
+                    );
 
-                //context.DrumKits.Add(drum);
-                //MessageBox.Show("Drumkit saved!");
+                context.DrumKits.Add(drum);
+                MessageBox.Show("Drumkit saved!");
             }
         }
 
@@ -246,16 +263,226 @@ namespace DrumWPF
             {
                 MessageBox.Show("Please select a DrumKit!");
             }
-            else if (MessageBox.Show("Are you sure you want to delete DrumKit: " + cmbDrumKit.SelectedItem + "?",
+            else if (MessageBox.Show("Are you sure you want to delete DrumKit: " + ((DrumKit)cmbDrumKit.SelectedItem).Name + "?",
                     "Delete DrumKit",
                     MessageBoxButton.YesNo,
                     MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                // delete kit   
+                context.DrumKits.Remove((DrumKit)cmbDrumKit.SelectedItem);  
 
                 MessageBox.Show("Drumkit Deleted!");
 
             }
+        }
+
+        private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string input = txtInput.Text.ToLower();
+            PlayInstrument(input);
+            txtInput.Clear();
+        }
+
+        public void PlayInstrument(string inp)
+        {
+
+            switch (inp)
+            {
+                case "a":
+                    CrashCymbal crashC = (CrashCymbal)cmbCrashCymbal.SelectedItem;
+
+                    if (crashC != null)
+                    {
+
+                        Properties.Resources.CrashCym = crashC.Name;
+                        snd = new SoundPlayer(Properties.Resources.crashCym);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Crash_Cymbal_1__1_);
+                    }
+                    snd.Play();
+                    break;
+
+                case "b":
+                    FloorTom floorT = (FloorTom)cmbFloorTom.SelectedItem;
+
+                    if (floorT != null)
+                    {
+                        Properties.Resources.FloorT = floorT.Name;
+                        snd = new SoundPlayer(Properties.Resources.floorT);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Floor_Tom_1);
+                    }
+                    snd.Play();
+                    break;
+
+                case "c":
+                    SnareDrum snare = (SnareDrum)cmbSnareDrum.SelectedItem;
+
+                    if (snare != null)
+                    {
+                        Properties.Resources.Snare = snare.Name;
+                        snd = new SoundPlayer(Properties.Resources.snare);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Ensoniq_ESQ_1_Snare);
+                    }
+                    snd.Play();
+                    break;
+
+                case "d":
+                    HiHatController pedal = (HiHatController)cmbHiHatController.SelectedItem;
+
+                    if (pedal != null)
+                    {
+                        Properties.Resources.HiHatPedal = pedal.Name;
+                        snd = new SoundPlayer(Properties.Resources.hiHatPedal);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Pedal_Hi_Hat_1);
+                    }
+                    snd.Play();
+
+                    if (btnClosedHH.Content.ToString() == "OpenHH")
+                    {
+                        btnClosedHH.Content = "ClosedHH";
+                    }
+                    else
+                    {
+                        btnClosedHH.Content = "OpenHH";
+                    }
+                    break;
+
+                case "e":
+                    if (btnClosedHH.Content.ToString() == "ClosedHH")
+                    {
+                        ClosedHiHat closed = (ClosedHiHat)cmbClosedHiHat.SelectedItem;
+
+                        if (closed != null)
+                        {
+                            Properties.Resources.CHiHat = closed.Name;
+                            snd = new SoundPlayer(Properties.Resources.cHiHat);
+                        }
+                        else
+                        {
+                            snd = new SoundPlayer(Properties.Resources.Closed_Hi_Hat_1);
+                        }
+                        snd.Play();
+                    }
+                    else
+                    {
+                        OpenHiHat open = (OpenHiHat)cmbOpenHiHat.SelectedItem;
+
+                        if (open != null)
+                        {
+                            Properties.Resources.OHiHat = open.Name;
+                            snd = new SoundPlayer(Properties.Resources.oHiHat);
+                        }
+                        else
+                        {
+                            snd = new SoundPlayer(Properties.Resources.Open_Hi_Hat_1);
+                        }
+                        snd.Play();
+                    }
+                    break;
+
+                case "f":
+                    HighTom highT = (HighTom)cmbHighTom.SelectedItem;
+
+                    if (highT != null)
+                    {
+                        Properties.Resources.HighT = highT.Name;
+                        snd = new SoundPlayer(Properties.Resources.highT);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Hi_Tom_1);
+                    }
+                    snd.Play();
+                    break;
+
+                case "g":
+                    RideCymbal rideC = (RideCymbal)cmbRideCymbal.SelectedItem;
+
+                    if (rideC != null)
+                    {
+                        Properties.Resources.RideCym = rideC.Name;
+                        snd = new SoundPlayer(Properties.Resources.rideCym);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Ensoniq_SQ_1_Ride_Cymbal);
+                    }
+                    snd.Play();
+                    break;
+
+                case "h":
+                    MidTom midT = (MidTom)cmbMidTom.SelectedItem;
+
+                    if (midT != null)
+                    {
+                        Properties.Resources.MidT = midT.Name;
+                        snd = new SoundPlayer(Properties.Resources.midT);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Mid_Tom_1);
+                    }
+                    snd.Play();
+                    break;
+
+                case "i":
+                    Kick bass = (Kick)cmbKick.SelectedItem;
+
+                    if (bass != null)
+                    {
+                        Properties.Resources.KickD = bass.Name;
+                        snd = new SoundPlayer(Properties.Resources.kickD);
+                    }
+                    else
+                    {
+                        snd = new SoundPlayer(Properties.Resources.Electronic_Kick_1);
+                    }
+                    snd.Play();
+                    break;
+
+
+                default:
+
+                    break;
+            }
+
+        }
+
+        public void ActivateMode(string mode)
+        {
+            switch (mode)
+            {
+                case "Keyboard":
+                    txtInput.Visibility = Visibility.Visible;
+                    gbxButtons.IsEnabled = false;
+                    txtInput.Focus();
+                    break;
+
+                case "Drum":
+                    gbxButtons.IsEnabled = false;
+                    txtInput.Visibility = Visibility.Hidden;
+                    break;
+
+                default:
+                    gbxButtons.IsEnabled = true;
+                    txtInput.Visibility = Visibility.Hidden;
+                    break;
+            }
+        }
+
+        private void cmbWhatToUse_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ActivateMode(cmbWhatToUse.SelectedItem.ToString());
         }
     }
 }
