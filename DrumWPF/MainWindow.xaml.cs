@@ -33,7 +33,9 @@ namespace DrumWPF
             DataContext = context;
             cmbWhatToUse.ItemsSource = modes;
             txtInput.Visibility = Visibility.Hidden;
-            
+            gbxLetters.Visibility = Visibility.Hidden;
+            cmbWhatToUse.SelectedItem = modes[0];
+
         }
 
         private void btnCrashCymbal_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -464,6 +466,7 @@ namespace DrumWPF
             {
                 case "Keyboard":
                     txtInput.Visibility = Visibility.Visible;
+                    gbxLetters.Visibility = Visibility.Visible;
                     gbxButtons.IsEnabled = false;
                     txtInput.Focus();
                     break;
@@ -471,11 +474,13 @@ namespace DrumWPF
                 case "Drum":
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
+                    gbxLetters.Visibility = Visibility.Hidden;
                     break;
 
                 default:
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
+                    gbxLetters.Visibility = Visibility.Hidden;
                     break;
             }
         }

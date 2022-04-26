@@ -7,12 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="istockphoto-935671156-612x612.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MouseKeyHook" Version="5.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\DrumAPI\DrumAPI.csproj" />
     <ProjectReference Include="..\DrumLib\DrumLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="istockphoto-935671156-612x612.jpg" />
   </ItemGroup>
 
   <ItemGroup>
