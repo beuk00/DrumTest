@@ -71,11 +71,6 @@ namespace DrumWPF
             snd.Play();
         }
 
-        private void btnOpenHiHat_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void btnSnareDrum_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             SnareDrum snare = (SnareDrum)cmbSnareDrum.SelectedItem;

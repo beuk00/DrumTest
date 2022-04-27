@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DrumWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1009">
+        Title="E-Drum" Height="450" Width="1009">
     <Grid Height="430" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1009">
         <!--<Grid.Background>
             <ImageBrush ImageSource="/istockphoto-935671156-612x612.jpg" Stretch="Uniform"/>
         </Grid.Background>-->
 
 
-        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="40,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="45" TextChanged="txtInput_TextChanged" BorderBrush="#FFF8F9FB"/>
-        <ComboBox Name="cmbWhatToUse" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbWhatToUse_SelectionChanged"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="188,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="24" Height="20" TextChanged="txtInput_TextChanged" BorderBrush="#FFF8F9FB"/>
+        <ComboBox Name="cmbWhatToUse" HorizontalAlignment="Left" Margin="140,15,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbWhatToUse_SelectionChanged"/>
         <GroupBox x:Name="gbxButtons" Margin="270,0,10,0" BorderBrush="#FFF8FAFB">
             <Grid HorizontalAlignment="Left" Width="735">
                 <Grid.Background>
@@ -24,28 +24,26 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="0*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnClosedHH" Content="ClosedHH" HorizontalAlignment="Left" Margin="157,210,0,0" VerticalAlignment="Top" Width="80" PreviewMouseLeftButtonDown="btnClosesHH_PreviewMouseLeftButtonDown" Height="35" Background="#FFAD976B"/>
+                <Button x:Name="btnClosedHH" Content="ClosedHH" HorizontalAlignment="Left" Margin="164,232,0,0" VerticalAlignment="Top" Width="80" PreviewMouseLeftButtonDown="btnClosesHH_PreviewMouseLeftButtonDown" Height="35" Background="#FFAD976B"/>
                 <Button x:Name="btnCrashCymbal" Content="CrashCymbal" HorizontalAlignment="Left" Margin="199,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.514,0.253" Width="90" ClickMode="Press" PreviewMouseLeftButtonDown="btnCrashCymbal_PreviewMouseLeftButtonDown" Height="39" Background="#FFC1A889"/>
                 <Button x:Name="btnFloorTom" Content="FloorTom" HorizontalAlignment="Left" Margin="454,232,0,0" VerticalAlignment="Top" Width="82" PreviewMouseLeftButtonDown="btnFloorTom_PreviewMouseLeftButtonDown" Height="29" Background="#FFF8EAE1"/>
                 <Button x:Name="btnHighTom" Content="HighTom" HorizontalAlignment="Left" Margin="300,151,0,0" VerticalAlignment="Top" Width="72" PreviewMouseLeftButtonDown="btnHighTom_PreviewMouseLeftButtonDown" Height="39" Background="#FFEBE2D1"/>
                 <Button x:Name="btnHiHatController" Content="HiHatController" HorizontalAlignment="Left" Margin="157,323,0,0" VerticalAlignment="Top" Width="105" PreviewMouseLeftButtonDown="btnHiHatController_PreviewMouseLeftButtonDown" Height="30"/>
                 <Button x:Name="btnKick"  Content="Kick" HorizontalAlignment="Left" Margin="352,224,0,0" VerticalAlignment="Top" Width="39" RenderTransformOrigin="0.538,1.856" PreviewMouseLeftButtonDown="btnKick_PreviewMouseLeftButtonDown" Height="30"/>
                 <Button x:Name="btnMidTom" Content="MidTom" HorizontalAlignment="Left" Margin="387,151,0,0" VerticalAlignment="Top" Width="71" PreviewMouseLeftButtonDown="btnMidTom_PreviewMouseLeftButtonDown" Height="39" Background="#FFF9EFE3"/>
-                <Button x:Name="btnOpenHiHat" Content="OpenHiHat" HorizontalAlignment="Left" Margin="157,250,0,0" VerticalAlignment="Top" Width="80" PreviewMouseLeftButtonDown="btnOpenHiHat_PreviewMouseLeftButtonDown" Height="30" Background="#FFA58D6A"/>
                 <Button x:Name="btnRideCymbal" Content="RideCymbal" HorizontalAlignment="Left" Margin="463,126,0,0" VerticalAlignment="Top" Width="116" PreviewMouseLeftButtonDown="btnRideCymbal_PreviewMouseLeftButtonDown" Height="50" Background="#FFE8CC9C"/>
                 <Button x:Name="btnSnareDrum" Content="SnareDrum" HorizontalAlignment="Left" Margin="254,232,0,0" VerticalAlignment="Top" Width="70" PreviewMouseLeftButtonDown="btnSnareDrum_PreviewMouseLeftButtonDown" Height="29" Background="#FFDBCDC0"/>
-                <GroupBox x:Name="gbxLetters" Margin="149,16,117,24" BorderBrush="#FFFAFCFD">
+                <GroupBox x:Name="gbxLetters" Margin="144,16,112,24" BorderBrush="#FFFAFCFD">
                     <Grid>
 
-                        <Label Content="E" HorizontalAlignment="Left" Margin="-12,194,0,0" VerticalAlignment="Top" Height="38" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="95" HorizontalContentAlignment="Center"/>
+                        <Label Content="E" HorizontalAlignment="Left" Margin="8,213,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="86" HorizontalContentAlignment="Center"/>
                         <Label Content="D" HorizontalAlignment="Left" Margin="-12,303,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="126" HorizontalContentAlignment="Center"/>
-                        <Label Content="J" HorizontalAlignment="Left" Margin="-12,237,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="95" HorizontalContentAlignment="Center"/>
-                        <Label Content="I" HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="61" HorizontalContentAlignment="Center"/>
-                        <Label Content="H" HorizontalAlignment="Left" Margin="228,133,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="75" HorizontalContentAlignment="Center"/>
-                        <Label Content="C" HorizontalAlignment="Left" Margin="88,210,0,0" VerticalAlignment="Top" Height="35" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="83" HorizontalContentAlignment="Center"/>
-                        <Label Content="B" HorizontalAlignment="Left" Margin="288,213,0,0" VerticalAlignment="Top" Height="34" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="96" HorizontalContentAlignment="Center"/>
-                        <Label Content="G" HorizontalAlignment="Left" Margin="308,107,0,0" VerticalAlignment="Top" Height="55" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" RenderTransformOrigin="0.416,0.514" Width="125" HorizontalContentAlignment="Center"/>
-                        <Label Content="A" HorizontalAlignment="Left" Margin="42,108,0,0" VerticalAlignment="Top" Height="40" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" RenderTransformOrigin="0.5,0.5" Width="94" HorizontalContentAlignment="Center">
+                        <Label Content="I" HorizontalAlignment="Left" Margin="196,204,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="61" HorizontalContentAlignment="Center"/>
+                        <Label Content="H" HorizontalAlignment="Left" Margin="234,134,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="75" HorizontalContentAlignment="Center"/>
+                        <Label Content="C" HorizontalAlignment="Left" Margin="101,213,0,0" VerticalAlignment="Top" Height="35" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="83" HorizontalContentAlignment="Center"/>
+                        <Label Content="B" HorizontalAlignment="Left" Margin="299,213,0,0" VerticalAlignment="Top" Height="34" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="90" HorizontalContentAlignment="Center"/>
+                        <Label Content="G" HorizontalAlignment="Left" Margin="309,107,0,0" VerticalAlignment="Top" Height="54" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" RenderTransformOrigin="0.416,0.514" Width="120" HorizontalContentAlignment="Center"/>
+                        <Label Content="A" HorizontalAlignment="Left" Margin="48,108,0,0" VerticalAlignment="Top" Height="40" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" RenderTransformOrigin="0.5,0.5" Width="94" HorizontalContentAlignment="Center">
                             <Label.RenderTransform>
                                 <TransformGroup>
                                     <ScaleTransform/>
@@ -55,13 +53,13 @@
                                 </TransformGroup>
                             </Label.RenderTransform>
                         </Label>
-                        <Label Content="F" HorizontalAlignment="Left" Margin="138,133,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="75" HorizontalContentAlignment="Center"/>
+                        <Label Content="F" HorizontalAlignment="Left" Margin="150,134,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="76" HorizontalContentAlignment="Center"/>
                     </Grid>
                 </GroupBox>
 
             </Grid>
         </GroupBox>
-        <ComboBox Name="cmbDrumKit" ItemsSource="{Binding DrumKits}" Margin="10,87,0,0" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="120" RenderTransformOrigin="0.5,0.547" FontSize="10">
+        <ComboBox Name="cmbDrumKit" ItemsSource="{Binding DrumKits}" Margin="140,69,0,0" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="120" RenderTransformOrigin="0.5,0.547" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -70,7 +68,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbCrashCymbal" ItemsSource="{Binding CrashCymbals}" HorizontalAlignment="Left" Margin="135,140,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.408" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbCrashCymbal" ItemsSource="{Binding CrashCymbals}" HorizontalAlignment="Left" Margin="140,129,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,-0.408" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -79,7 +77,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbClosedHiHat" ItemsSource="{Binding ClosedHiHats}" HorizontalAlignment="Left" Margin="135,167,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbClosedHiHat" ItemsSource="{Binding ClosedHiHats}" HorizontalAlignment="Left" Margin="140,156,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -88,7 +86,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbFloorTom" ItemsSource="{Binding FloorToms}" HorizontalAlignment="Left" Margin="135,194,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbFloorTom" ItemsSource="{Binding FloorToms}" HorizontalAlignment="Left" Margin="140,183,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -97,7 +95,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbOpenHiHat" ItemsSource="{Binding OpenHiHats}" HorizontalAlignment="Left" Margin="135,221,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbOpenHiHat" ItemsSource="{Binding OpenHiHats}" HorizontalAlignment="Left" Margin="140,210,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -106,7 +104,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbSnareDrum" ItemsSource="{Binding SnareDrums}" HorizontalAlignment="Left" Margin="135,248,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbSnareDrum" ItemsSource="{Binding SnareDrums}" HorizontalAlignment="Left" Margin="140,237,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -115,7 +113,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbHiHatController" ItemsSource="{Binding HiHatControllers}" HorizontalAlignment="Left" Margin="135,275,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbHiHatController" ItemsSource="{Binding HiHatControllers}" HorizontalAlignment="Left" Margin="140,264,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -124,7 +122,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbMidTom" ItemsSource="{Binding MidToms}" HorizontalAlignment="Left" Margin="135,302,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbMidTom" ItemsSource="{Binding MidToms}" HorizontalAlignment="Left" Margin="140,291,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -133,7 +131,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbKick" ItemsSource="{Binding Kicks}" HorizontalAlignment="Left" Margin="135,329,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbKick" ItemsSource="{Binding Kicks}" HorizontalAlignment="Left" Margin="140,318,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -142,7 +140,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbRideCymbal" ItemsSource="{Binding RideCymbals}" HorizontalAlignment="Left" Margin="135,356,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbRideCymbal" ItemsSource="{Binding RideCymbals}" HorizontalAlignment="Left" Margin="140,345,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -151,7 +149,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbHighTom" ItemsSource="{Binding HighToms}" HorizontalAlignment="Left" Margin="135,383,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbHighTom" ItemsSource="{Binding HighToms}" HorizontalAlignment="Left" Margin="140,372,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -160,19 +158,21 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <TextBox x:Name="txtSaveKit" HorizontalAlignment="Left" Margin="135,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Button x:Name="btnDeleteKit" Content="Delete" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" Click="btnDeleteKit_Click" Height="20" Width="38"/>
-        <Button x:Name="btnSaveKit" Content="Save" HorizontalAlignment="Left" Margin="135,114,0,0" VerticalAlignment="Top" Click="btnSaveKit_Click" Height="20" Width="29"/>
-        <Label Content="CrashCymbal" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.593"/>
-        <Label Content="ClosedHiHat" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="FloorTom" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="OpenHiHat" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.208,0.502"/>
-        <Label Content="SnareDrum" HorizontalAlignment="Left" Margin="10,248,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="HiHatController" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="MidTom" HorizontalAlignment="Left" Margin="10,302,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="Kick" HorizontalAlignment="Left" Margin="10,329,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
-        <Label Content="RideCymbal" HorizontalAlignment="Left" Margin="10,356,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.547"/>
-        <Label Content="HighTom" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <TextBox x:Name="txtSaveKit" HorizontalAlignment="Left" Margin="15,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Button x:Name="btnDeleteKit" Content="Delete" HorizontalAlignment="Left" Margin="140,96,0,0" VerticalAlignment="Top" Click="btnDeleteKit_Click" Height="20" Width="38" RenderTransformOrigin="0.447,0.652"/>
+        <Button x:Name="btnSaveKit" Content="Save" HorizontalAlignment="Left" Margin="15,96,0,0" VerticalAlignment="Top" Click="btnSaveKit_Click" Height="20" Width="29"/>
+        <Label Content="CrashCymbal" HorizontalAlignment="Left" Margin="15,129,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.593"/>
+        <Label Content="ClosedHiHat" HorizontalAlignment="Left" Margin="15,156,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="FloorTom" HorizontalAlignment="Left" Margin="15,183,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="OpenHiHat" HorizontalAlignment="Left" Margin="15,210,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.208,0.502"/>
+        <Label Content="SnareDrum" HorizontalAlignment="Left" Margin="15,237,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="HiHatController" HorizontalAlignment="Left" Margin="15,264,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="MidTom" HorizontalAlignment="Left" Margin="15,291,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="Kick" HorizontalAlignment="Left" Margin="15,318,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="RideCymbal" HorizontalAlignment="Left" Margin="15,345,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.547"/>
+        <Label Content="HighTom" HorizontalAlignment="Left" Margin="15,372,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
+        <Label Content="Play Mode" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.593"/>
+        <Label Content="DrumKit SetUp" HorizontalAlignment="Left" Margin="75,42,0,0" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.869,0.32" Width="94" FontSize="10" FontWeight="Bold"/>
 
     </Grid>
 </Window>
