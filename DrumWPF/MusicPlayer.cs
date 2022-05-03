@@ -16,6 +16,7 @@ namespace DrumWPF
         private bool IsLooping = false;
         public string FileName;
         public string TrackName;
+        string BaseUrl = "C:\\Users\\Tom\\Documents\\GitHub\\DrumTest\\DrumWPF\\Resources\\";
 
         private long lngVolume = 500;
 
@@ -98,10 +99,10 @@ namespace DrumWPF
             //mciSendString("setaudio " + strAlias + " volume to " & lngVolume, "", 0, 0&);
         }
 
-        public void Play(bool play)
+        public void Play(string instrumentType, string instrumentName, bool play)
         {
 
-            FileName = "C:\\Users\\Tom\\Documents\\GitHub\\DrumTest\\DrumWPF\\Resources\\Crash\\Crash-Cymbal-1 (1).wav";
+            FileName = $"C:\\Users\\Tom\\Documents\\GitHub\\DrumTest\\DrumWPF\\Resources\\{instrumentType}\\{instrumentName}.wav";
 
             try
             {
