@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrumAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220503123546_inital")]
-    partial class inital
+    [Migration("20220503130105_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -315,7 +315,7 @@ namespace DrumAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HiHatsControllers");
+                    b.ToTable("HiHatControllers");
 
                     b.HasData(
                         new

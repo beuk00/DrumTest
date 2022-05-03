@@ -2,7 +2,7 @@
 
 namespace DrumAPI.Migrations
 {
-    public partial class inital : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -59,7 +59,7 @@ namespace DrumAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "HiHatsControllers",
+                name: "HiHatControllers",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -68,7 +68,7 @@ namespace DrumAPI.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HiHatsControllers", x => x.Id);
+                    table.PrimaryKey("PK_HiHatControllers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -176,9 +176,9 @@ namespace DrumAPI.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_DrumKits_HiHatsControllers_HiHatControllerId",
+                        name: "FK_DrumKits_HiHatControllers_HiHatControllerId",
                         column: x => x.HiHatControllerId,
-                        principalTable: "HiHatsControllers",
+                        principalTable: "HiHatControllers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -270,7 +270,7 @@ namespace DrumAPI.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "HiHatsControllers",
+                table: "HiHatControllers",
                 columns: new[] { "Id", "Name" },
                 values: new object[,]
                 {
@@ -445,7 +445,7 @@ namespace DrumAPI.Migrations
                 name: "FloorToms");
 
             migrationBuilder.DropTable(
-                name: "HiHatsControllers");
+                name: "HiHatControllers");
 
             migrationBuilder.DropTable(
                 name: "HighToms");

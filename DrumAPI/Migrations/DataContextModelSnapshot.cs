@@ -313,7 +313,7 @@ namespace DrumAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HiHatsControllers");
+                    b.ToTable("HiHatControllers");
 
                     b.HasData(
                         new

@@ -15,7 +15,7 @@ namespace DrumAPI.Data
         public DbSet<DrumKit> DrumKits { get; set; }
         public DbSet<FloorTom> FloorToms { get; set; }
         public DbSet<HighTom> HighToms { get; set; }
-        public DbSet<HiHatController> HiHatsControllers { get; set; }
+        public DbSet<HiHatController> HiHatControllers { get; set; }
         public DbSet<Kick> Kicks { get; set; }
         public DbSet<MidTom> MidToms { get; set; }
         public DbSet<OpenHiHat> OpenHiHats { get; set; }

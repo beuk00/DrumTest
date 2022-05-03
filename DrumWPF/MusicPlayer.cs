@@ -19,14 +19,19 @@ namespace DrumWPF
 
         private long lngVolume = 500;
 
+        bool init = false;
+
         public MusicPlayer(string fileName)
         {
             this.TrackName = fileName;
-            if (fileName.Contains("\\"))
-                this.FileName = fileName;
-            else
-                this.FileName = AppDomain.CurrentDomain.BaseDirectory + fileName;
+            //if (fileName.Contains("\\"))
+            //    this.FileName = fileName;
+            //else
+            //    this.FileName = AppDomain.CurrentDomain.BaseDirectory + fileName;
+
+            //Play("Crash","grxyy",true);
         }
+
 
         private void PlayWorker()
         {
@@ -59,9 +64,9 @@ namespace DrumWPF
                     }
                 }
 
-                if (oldvol != lngVolume) 
+                if (oldvol != lngVolume)
                 {
-                    
+
                     sb = new
 
                         StringBuilder("................................................................................................................................");
@@ -83,6 +88,8 @@ namespace DrumWPF
             }
             mciSendString("stop " + this.TrackName, sb, 0, IntPtr.Zero);
             mciSendString("close " + this.TrackName, sb, 0, IntPtr.Zero);
+
+
         }
 
         //volume between 0-10
@@ -169,6 +176,6 @@ namespace DrumWPF
             SND_FILENAME = 0x00020000, // name is file name 
             SND_RESOURCE = 0x00040004  // name is resource name or atom 
         }
-            
-        }
+
     }
+}

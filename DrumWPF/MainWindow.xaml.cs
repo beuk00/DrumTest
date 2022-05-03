@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Media;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -295,7 +296,7 @@ namespace DrumWPF
             txtInput.Clear();
         }
 
-        public void PlayInstrument(string inp)
+        public void PlayInstrument(string inp, bool test = false)
         {
 
             switch (inp)
