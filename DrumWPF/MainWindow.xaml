@@ -7,11 +7,6 @@
         mc:Ignorable="d"
         Title="E-Drum" Height="450" Width="1009">
     <Grid Height="430" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1009">
-        <!--<Grid.Background>
-            <ImageBrush ImageSource="/istockphoto-935671156-612x612.jpg" Stretch="Uniform"/>
-        </Grid.Background>-->
-
-
         <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="188,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="24" Height="20" TextChanged="txtInput_TextChanged" BorderBrush="#FFF8F9FB"/>
         <ComboBox Name="cmbWhatToUse" HorizontalAlignment="Left" Margin="140,15,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmbWhatToUse_SelectionChanged"/>
         <GroupBox x:Name="gbxButtons" Margin="270,0,10,0" BorderBrush="#FFF8FAFB">
