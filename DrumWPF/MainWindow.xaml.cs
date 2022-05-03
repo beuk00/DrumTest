@@ -23,6 +23,7 @@ namespace DrumWPF
     public partial class MainWindow : Window
     {
         WpfContext context = WpfContext.Instance;
+        MusicPlayer mp = null;
         SoundPlayer snd = null;
         List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
 
@@ -45,13 +46,17 @@ namespace DrumWPF
             {
 
                 Properties.Resources.CrashCym = crashC.Name;
-                snd = new SoundPlayer(Properties.Resources.crashCym);
+                mp = new MusicPlayer(Properties.Resources.crashCym.ToString());
             }
             else
             {
-                snd = new SoundPlayer(Properties.Resources.Crash_Cymbal_1__1_);
+                //using (MusicPlayer mp = new MusicPlayer())
+                //{
+
+                //}
+                mp = new MusicPlayer(Properties.Resources.Crash_Cymbal_1__1_.ToString());
             }
-            snd.Play();
+            mp.Play(true);
         }
 
         private void btnFloorTom_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
