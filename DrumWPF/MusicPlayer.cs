@@ -16,7 +16,6 @@ namespace DrumWPF
         private bool IsLooping = false;
         public string FileName;
         public string TrackName;
-        string BaseUrl = "C:\\Users\\Tom\\Documents\\GitHub\\DrumTest\\DrumWPF\\Resources\\";
 
         private long lngVolume = 500;
 
@@ -118,10 +117,10 @@ namespace DrumWPF
                 Thread WorkerThread = new Thread(ts);
                 WorkerThread.Start();
                 DateTime t = DateTime.Now;
-                PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE);// | SoundFlags.SND_NOSTOP );
+                PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);// | SoundFlags.SND_NOSTOP );
                 mciSendString("Open \"" + AppDomain.CurrentDomain.BaseDirectory + "local.wav\" alias local", new StringBuilder(), 0, IntPtr.Zero);
                 mciSendString("play local", new StringBuilder(), 0, IntPtr.Zero);
-                PlaySound(null, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_RESOURCE);
+                PlaySound(null, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
                 //Timer = 0;//reset the timer
             }
             catch (Exception ex)
