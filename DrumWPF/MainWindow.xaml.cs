@@ -114,7 +114,7 @@ namespace DrumWPF
             {
                 mp = new MusicPlayer(Properties.Resources.Pedal_Hi_Hat_1.ToString());
             }
-            mp.Play("HiHat controller", pedal.Name, true);
+            
 
             if (btnClosedHH.Content.ToString() == "OpenHH")
             {
@@ -124,6 +124,8 @@ namespace DrumWPF
             {
                 btnClosedHH.Content = "OpenHH";
             }
+
+            mp.Play("HiHat controller", pedal.Name, true);
         }
 
         private void btnClosesHH_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
