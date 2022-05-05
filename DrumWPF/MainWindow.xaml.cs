@@ -25,7 +25,7 @@ namespace DrumWPF
     {
         WpfContext context = WpfContext.Instance;
         MusicPlayer mp = null;
-        readonly List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
+        readonly List<string> modes = new List<string>() { "Choose PlayMode", "Mouse", "Keyboard", "Drum" };
 
         public MainWindow()
         {
@@ -36,10 +36,10 @@ namespace DrumWPF
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
             cmbWhatToUse.SelectedItem = modes[0];
+            gbxButtons.IsEnabled = false;
 
             // default combobox values
 
-            gbxButtons.IsEnabled = false;
             cmbCrashCymbal.SelectedIndex = 0;
             cmbFloorTom.SelectedIndex = 0;
             cmbHighTom.SelectedIndex = 0;
@@ -52,6 +52,8 @@ namespace DrumWPF
             cmbSnareDrum.SelectedIndex = 0;
 
             cmbDrumKit.SelectedIndex = 0;
+            
+            
         }
 
 
@@ -362,6 +364,7 @@ namespace DrumWPF
             switch (mode)
             {
                 case "Keyboard":
+                    modes.Remove("Choose PlayMode");
                     txtInput.Visibility = Visibility.Visible;
                     gbxLetters.Visibility = Visibility.Visible;
                     gbxButtons.IsEnabled = false;
@@ -369,12 +372,14 @@ namespace DrumWPF
                     break;
 
                 case "Drum":
+                    modes.Remove("Choose PlayMode");
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
                     break;
 
                 default:
+                    modes.Remove("Choose PlayMode");
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
