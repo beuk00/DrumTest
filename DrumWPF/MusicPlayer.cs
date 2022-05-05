@@ -4,8 +4,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows;
-using System.Media;
-using Ookii.Dialogs.Wpf;
 
 namespace DrumWPF
 {
@@ -13,7 +11,6 @@ namespace DrumWPF
     {
 
         public bool IsBeingPlayed = false;
-        private bool IsLooping = false;
         public string FileName;
         public string TrackName;
 
@@ -33,60 +30,9 @@ namespace DrumWPF
         private void PlayWorker()
         {
             StringBuilder sb = new StringBuilder();
-            int result = mciSendString("open \"" + FileName + "\" type waveaudio  alias " + this.TrackName, sb, 0, IntPtr.Zero);
+            mciSendString("open \"" + FileName + "\" type waveaudio  alias " + this.TrackName, sb, 0, IntPtr.Zero);
             mciSendString("play " + this.TrackName, sb, 0, IntPtr.Zero);
             IsBeingPlayed = true;
-            //loop
-            sb = new StringBuilder();
-            mciSendString("status " + this.TrackName + " length", sb, 255, IntPtr.Zero);
-            int length = Convert.ToInt32(sb.ToString());
-            int pos = 0;
-            long oldvol = lngVolume;
-
-            while (IsBeingPlayed)
-            {
-                sb = new StringBuilder();
-                mciSendString("status " + this.TrackName + " position", sb, 255, IntPtr.Zero);
-                pos = Convert.ToInt32(sb.ToString());
-                if (pos >= length)
-                {
-                    if (!IsLooping)
-                    {
-                        IsBeingPlayed = false;
-                        break;
-                    }
-                    else
-                    {
-                        mciSendString("play " + this.TrackName + " from 0", sb, 0, IntPtr.Zero);
-                    }
-                }
-
-                if (oldvol != lngVolume)
-                {
-
-                    sb = new
-
-                        StringBuilder("................................................................................................................................");
-                    string cmd = "setaudio " + this.TrackName + " volume to " + lngVolume.ToString();
-                    long err = mciSendString(cmd, sb, sb.Length, IntPtr.Zero);
-                    System.Diagnostics.Debug.Print(cmd);
-                    if (err != 0)
-                    {
-                        System.Diagnostics.Debug.Print("ERror " + err);
-                    }
-                    else
-                    {
-                        System.Diagnostics.Debug.Print("No errors!");
-                    }
-                    oldvol = lngVolume;
-                }
-
-                //Application.DoEvents();
-            }
-            mciSendString("stop " + this.TrackName, sb, 0, IntPtr.Zero);
-            mciSendString("close " + this.TrackName, sb, 0, IntPtr.Zero);
-
-
         }
 
         //volume between 0-10
@@ -104,7 +50,6 @@ namespace DrumWPF
 
         public void Play(string instrumentType, string instrumentName, bool play)
         {
-
             FileName = $"{AppContext.BaseDirectory.Substring(0, AppContext.BaseDirectory.IndexOf("DrumWPF") + "DrumWPF".Length)}\\Resources\\{instrumentType}\\{instrumentName}.wav";
 
             try
@@ -120,27 +65,21 @@ namespace DrumWPF
                 ThreadStart ts = new ThreadStart(PlayWorker);
                 Thread WorkerThread = new Thread(ts);
                 WorkerThread.Start();
-                DateTime t = DateTime.Now;
+                //DateTime t = DateTime.Now;
                 PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
                 mciSendString("Open \"" + AppDomain.CurrentDomain.BaseDirectory + "local.wav\" alias local", new StringBuilder(), 0, IntPtr.Zero);
                 mciSendString("play local", new StringBuilder(), 0, IntPtr.Zero);
                 PlaySound(null, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
-                //Timer = 0;//reset the timer
             }
             catch (Exception ex)
             {
-                //frmMain.WriteLog("Error occured in Loop: " + ex.Message);
+                MessageBox.Show("Error occured: " + ex.Message);
             }
         }
 
         public void StopPlaying()
         {
             IsBeingPlayed = false;
-            //PlaySound(null, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_LOOP);
-            //mciSendString("stop local", new StringBuilder(), 0, IntPtr.Zero);
-            //mciSendString("close local", new StringBuilder(), 0, IntPtr.Zero);
-            //if (LoopThread !=null && LoopThread.ThreadState==ThreadState.Running)
-            //    LoopThread.Abort();
         }
 
         //sound api functions
@@ -153,9 +92,7 @@ namespace DrumWPF
             IntPtr hMod,
             SoundFlags sf);
 
-        // Flags for playing sounds.  For this example, we are reading 
-        // the sound from a filename, so we need only specify 
-        // SND_FILENAME | SND_ASYNC
+        // Flags for playing sounds.  
 
         [Flags]
         public enum SoundFlags : int
