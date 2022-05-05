@@ -25,7 +25,7 @@ namespace DrumWPF
     {
         WpfContext context = WpfContext.Instance;
         MusicPlayer mp = null;
-        readonly List<string> modes = new List<string>() { "Choose PlayMode", "Mouse", "Keyboard", "Drum" };
+        readonly List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
 
         public MainWindow()
         {
@@ -36,7 +36,6 @@ namespace DrumWPF
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
             cmbWhatToUse.SelectedItem = modes[0];
-            gbxButtons.IsEnabled = false;
 
             // default combobox values
 
@@ -193,12 +192,13 @@ namespace DrumWPF
 
                         Properties.Resources.CrashCym = crashC.Name;
                         mp = new MusicPlayer(Properties.Resources.crashCym.ToString());
+                        mp.Play("Crash", crashC.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Crash_Cymbal_1__1_.ToString());
+                        mp.Play("Crash", "Crash_Cymbal_1__1_", true);
                     }
-                    mp.Play("Crash", crashC.Name, true);
                     break;
 
                 case "b":
@@ -208,12 +208,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.FloorT = floorT.Name;
                         mp = new MusicPlayer(Properties.Resources.floorT.ToString());
+                        mp.Play("FloorTom", floorT.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Floor_Tom_1.ToString());
+                        mp.Play("FloorTom", "Floor_Tom_1", true);
                     }
-                    mp.Play("FloorTom", floorT.Name, true);
                     break;
 
                 case "c":
@@ -223,12 +224,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.Snare = snare.Name;
                         mp = new MusicPlayer(Properties.Resources.snare.ToString());
+                        mp.Play("Snare", snare.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Ensoniq_ESQ_1_Snare.ToString());
+                        mp.Play("Snare", "Ensoniq_ESQ_1_Snare", true);
                     }
-                    mp.Play("Snare" , snare.Name, true);
                     break;
 
                 case "d":
@@ -238,12 +240,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.HiHatPedal = pedal.Name;
                         mp = new MusicPlayer(Properties.Resources.hiHatPedal.ToString());
+                        mp.Play("HiHat controller", pedal.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Pedal_Hi_Hat_1.ToString());
+                        mp.Play("HiHat controller", "Pedal_Hi_Hat_1", true);
                     }
-                    mp.Play("HiHat controller", pedal.Name, true);
 
                     if (btnClosedHH.Content.ToString() == "OpenHH")
                     {
@@ -264,12 +267,13 @@ namespace DrumWPF
                         {
                             Properties.Resources.CHiHat = closed.Name;
                             mp = new MusicPlayer(Properties.Resources.cHiHat.ToString());
+                            mp.Play("HiHat closed", closed.Name, true);
                         }
                         else
                         {
                             mp = new MusicPlayer(Properties.Resources.Closed_Hi_Hat_1.ToString());
+                            mp.Play("HiHat closed", "Closed_Hi_Hat_1", true);
                         }
-                        mp.Play("HiHat closed", closed.Name, true);
                     }
                     else
                     {
@@ -279,12 +283,13 @@ namespace DrumWPF
                         {
                             Properties.Resources.OHiHat = open.Name;
                             mp = new MusicPlayer(Properties.Resources.oHiHat.ToString());
+                            mp.Play("HiHat open", open.Name, true);
                         }
                         else
                         {
                             mp = new MusicPlayer(Properties.Resources.Open_Hi_Hat_1.ToString());
+                            mp.Play("HiHat open", "Open_Hi_Hat_1", true);
                         }
-                        mp.Play("HiHat open", open.Name, true);
                     }
                     break;
 
@@ -295,12 +300,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.HighT = highT.Name;
                         mp = new MusicPlayer(Properties.Resources.highT.ToString());
+                        mp.Play("HighTom", highT.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Hi_Tom_1.ToString());
+                        mp.Play("HighTom", "Hi_Tom_1", true);
                     }
-                    mp.Play("HighTom", highT.Name, true);
                     break;
 
                 case "g":
@@ -310,12 +316,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.RideCym = rideC.Name;
                         mp = new MusicPlayer(Properties.Resources.rideCym.ToString());
+                        mp.Play("Ride", rideC.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Ensoniq_SQ_1_Ride_Cymbal.ToString());
+                        mp.Play("Ride", "Ensoniq_SQ_1_Ride_Cymbal", true);
                     }
-                    mp.Play("Ride", rideC.Name, true);
                     break;
 
                 case "h":
@@ -325,12 +332,13 @@ namespace DrumWPF
                     {
                         Properties.Resources.MidT = midT.Name;
                         mp = new MusicPlayer(Properties.Resources.midT.ToString());
+                        mp.Play("MidTom", midT.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Mid_Tom_1.ToString());
+                        mp.Play("MidTom", "Mid_Tom_1", true);
                     }
-                    mp.Play("MidTom", midT.Name, true);
                     break;
 
                 case "i":
@@ -340,17 +348,16 @@ namespace DrumWPF
                     {
                         Properties.Resources.KickD = bass.Name;
                         mp = new MusicPlayer(Properties.Resources.kickD.ToString());
+                        mp.Play("Kick", bass.Name, true);
                     }
                     else
                     {
                         mp = new MusicPlayer(Properties.Resources.Electronic_Kick_1.ToString());
+                        mp.Play("Kick", "Electronic_Kick_1", true);
                     }
-                    mp.Play("Kick", bass.Name, true);
                     break;
 
-
                 default:
-
                     break;
             }
 
@@ -364,7 +371,6 @@ namespace DrumWPF
             switch (mode)
             {
                 case "Keyboard":
-                    modes.Remove("Choose PlayMode");
                     txtInput.Visibility = Visibility.Visible;
                     gbxLetters.Visibility = Visibility.Visible;
                     gbxButtons.IsEnabled = false;
@@ -372,14 +378,12 @@ namespace DrumWPF
                     break;
 
                 case "Drum":
-                    modes.Remove("Choose PlayMode");
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
                     break;
 
                 default:
-                    modes.Remove("Choose PlayMode");
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;

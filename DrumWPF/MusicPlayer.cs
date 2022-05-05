@@ -121,7 +121,7 @@ namespace DrumWPF
                 Thread WorkerThread = new Thread(ts);
                 WorkerThread.Start();
                 DateTime t = DateTime.Now;
-                PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);// | SoundFlags.SND_NOSTOP );
+                PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
                 mciSendString("Open \"" + AppDomain.CurrentDomain.BaseDirectory + "local.wav\" alias local", new StringBuilder(), 0, IntPtr.Zero);
                 mciSendString("play local", new StringBuilder(), 0, IntPtr.Zero);
                 PlaySound(null, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
