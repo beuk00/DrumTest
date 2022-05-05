@@ -25,19 +25,21 @@ namespace DrumWPF
     {
         WpfContext context = WpfContext.Instance;
         MusicPlayer mp = null;
-        List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
+        readonly List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
 
         public MainWindow()
         {
             InitializeComponent();
             DataContext = context;
             cmbWhatToUse.ItemsSource = modes;
+            
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
             cmbWhatToUse.SelectedItem = modes[0];
 
             // default combobox values
 
+            gbxButtons.IsEnabled = false;
             cmbCrashCymbal.SelectedIndex = 0;
             cmbFloorTom.SelectedIndex = 0;
             cmbHighTom.SelectedIndex = 0;
@@ -50,7 +52,6 @@ namespace DrumWPF
             cmbSnareDrum.SelectedIndex = 0;
 
             cmbDrumKit.SelectedIndex = 0;
-
         }
 
 

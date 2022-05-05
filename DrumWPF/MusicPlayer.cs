@@ -105,7 +105,7 @@ namespace DrumWPF
         public void Play(string instrumentType, string instrumentName, bool play)
         {
 
-            FileName = $"C:\\Users\\Tom\\Documents\\GitHub\\DrumTest\\DrumWPF\\Resources\\{instrumentType}\\{instrumentName}.wav";
+            FileName = $"{AppContext.BaseDirectory.Substring(0, AppContext.BaseDirectory.IndexOf("DrumWPF") + "DrumWPF".Length)}\\Resources\\{instrumentType}\\{instrumentName}.wav";
 
             try
             {
