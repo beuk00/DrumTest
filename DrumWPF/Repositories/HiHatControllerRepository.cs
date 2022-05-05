@@ -42,7 +42,7 @@ namespace DrumWPF.Repositories
         {
             using (HttpClient client = new HttpClient())
             {
-                string response = await client.GetStringAsync($"{baseUrl}OpenHiHat");
+                string response = await client.GetStringAsync($"{baseUrl}HiHatController");
 
                 List<HiHatController> res = JsonConvert.DeserializeObject<List<HiHatController>>(response);
 

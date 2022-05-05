@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <None Remove="istockphoto-935671156-612x612.jpg" />
+    <None Remove="Resources\Crash\Crash-Cymbal-1 %281%29.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +22,9 @@
 
   <ItemGroup>
     <Resource Include="istockphoto-935671156-612x612.jpg" />
+    <Resource Include="Resources\Crash\Crash-Cymbal-1 (1).wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
