@@ -65,7 +65,7 @@ namespace DrumWPF
                 ThreadStart ts = new ThreadStart(PlayWorker);
                 Thread WorkerThread = new Thread(ts);
                 WorkerThread.Start();
-                //DateTime t = DateTime.Now;
+               
                 PlaySound(FileName, IntPtr.Zero, SoundFlags.SND_FILENAME | SoundFlags.SND_ASYNC | SoundFlags.SND_NODEFAULT | SoundFlags.SND_RESOURCE | SoundFlags.SND_NOSTOP | SoundFlags.SND_NOWAIT);
                 mciSendString("Open \"" + AppDomain.CurrentDomain.BaseDirectory + "local.wav\" alias local", new StringBuilder(), 0, IntPtr.Zero);
                 mciSendString("play local", new StringBuilder(), 0, IntPtr.Zero);
@@ -83,6 +83,7 @@ namespace DrumWPF
         }
 
         //sound api functions
+
         [DllImport("winmm.dll")]
         static extern Int32 mciSendString(string command, StringBuilder buffer, int bufferSize, IntPtr hwndCallback);
 
@@ -91,6 +92,7 @@ namespace DrumWPF
             string pszSound,
             IntPtr hMod,
             SoundFlags sf);
+
 
         // Flags for playing sounds.  
 

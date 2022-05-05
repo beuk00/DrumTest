@@ -313,7 +313,7 @@ namespace DrumWPF
             }
         }
 
-        public void SelectPlay(object instrument, string item, string name)
+        public void SelectPlay(object instrument, string namePath, string item)
         {
             var realInstrument = instrument.GetType();
 
@@ -322,7 +322,7 @@ namespace DrumWPF
                 Properties.Resources.KickD = realInstrument.Name;
 
                 mp = new MusicPlayer(Properties.Resources.kickD.ToString());
-                mp.Play(name, realInstrument.Name, true);
+                mp.Play(namePath, realInstrument.Name, true);
             }
         }
 
