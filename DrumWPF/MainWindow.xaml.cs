@@ -25,7 +25,6 @@ namespace DrumWPF
     {
         WpfContext context = WpfContext.Instance;
         MusicPlayer mp = null;
-        SoundPlayer snd = null;
         List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
 
         public MainWindow()
@@ -37,7 +36,8 @@ namespace DrumWPF
             gbxLetters.Visibility = Visibility.Hidden;
             cmbWhatToUse.SelectedItem = modes[0];
 
-            // default combobox value
+            // default combobox values
+
             cmbCrashCymbal.SelectedIndex = 0;
             cmbFloorTom.SelectedIndex = 0;
             cmbHighTom.SelectedIndex = 0;
@@ -53,179 +53,57 @@ namespace DrumWPF
 
         }
 
+
+        // Drum Buttons
+
         private void btnCrashCymbal_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            CrashCymbal crashC = (CrashCymbal)cmbCrashCymbal.SelectedItem;
-
-            if (crashC != null)
-            {
-
-                Properties.Resources.CrashCym = crashC.Name;
-                mp = new MusicPlayer(Properties.Resources.crashCym.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Crash_Cymbal_1__1_.ToString());
-            }
-            mp.Play("Crash", crashC.Name, true);
+            PlayInstrument("a");
         }
 
         private void btnFloorTom_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            FloorTom floorT = (FloorTom)cmbFloorTom.SelectedItem;
+            PlayInstrument("b");
 
-            if (floorT != null)
-            {
-                Properties.Resources.FloorT = floorT.Name;
-                mp = new MusicPlayer(Properties.Resources.floorT.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Floor_Tom_1.ToString());
-            }
-            mp.Play("FloorTom", floorT.Name, true);
         }
 
         private void btnSnareDrum_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            SnareDrum snare = (SnareDrum)cmbSnareDrum.SelectedItem;
-
-            if (snare != null)
-            {
-                Properties.Resources.Snare = snare.Name;
-                mp = new MusicPlayer(Properties.Resources.snare.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Ensoniq_ESQ_1_Snare.ToString());
-            }
-            mp.Play("Snare",snare.Name, true);
+            PlayInstrument("c");
         }
 
         private void btnHiHatController_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            HiHatController pedal = (HiHatController)cmbHiHatController.SelectedItem;
-
-            if (pedal != null)
-            {
-                Properties.Resources.HiHatPedal = pedal.Name;
-                mp = new MusicPlayer(Properties.Resources.hiHatPedal.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Pedal_Hi_Hat_1.ToString());
-            }
-            
-
-            if (btnClosedHH.Content.ToString() == "OpenHH")
-            {
-                btnClosedHH.Content = "ClosedHH";
-            }
-            else
-            {
-                btnClosedHH.Content = "OpenHH";
-            }
-
-            mp.Play("HiHat controller", pedal.Name, true);
+            PlayInstrument("d");
         }
 
         private void btnClosesHH_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (btnClosedHH.Content.ToString() == "ClosedHH")
-            {
-                ClosedHiHat closed = (ClosedHiHat)cmbClosedHiHat.SelectedItem;
-
-                if (closed != null)
-                {
-                    Properties.Resources.CHiHat = closed.Name;
-                    mp = new MusicPlayer(Properties.Resources.cHiHat.ToString());
-                }
-                else
-                {
-                    mp = new MusicPlayer(Properties.Resources.Closed_Hi_Hat_1.ToString());
-                }
-                mp.Play("HiHat closed", closed.Name, true);
-            }
-            else
-            {
-                OpenHiHat open = (OpenHiHat)cmbOpenHiHat.SelectedItem;
-
-                if (open != null)
-                {
-                    Properties.Resources.OHiHat = open.Name;
-                    mp = new MusicPlayer(Properties.Resources.oHiHat.ToString());
-                }
-                else
-                {
-                    mp = new MusicPlayer(Properties.Resources.Open_Hi_Hat_1.ToString());
-                }
-                mp.Play("HiHat open", open.Name, true);
-            }
+            PlayInstrument("e");
         }
 
         private void btnHighTom_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            HighTom highT = (HighTom)cmbHighTom.SelectedItem;
-
-            if (highT != null)
-            {
-                Properties.Resources.HighT = highT.Name;
-                mp = new MusicPlayer(Properties.Resources.highT.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Hi_Tom_1.ToString());
-            }
-            mp.Play("HighTom", highT.Name, true);
+            PlayInstrument("f");
         }
 
         private void btnRideCymbal_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            RideCymbal rideC = (RideCymbal)cmbRideCymbal.SelectedItem;
-
-            if (rideC != null)
-            {
-                Properties.Resources.RideCym = rideC.Name;
-                mp = new MusicPlayer(Properties.Resources.rideCym.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Ensoniq_SQ_1_Ride_Cymbal.ToString());
-            }
-            mp.Play("Ride", rideC.Name, true);
+            PlayInstrument("g");
         }
 
         private void btnMidTom_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            MidTom midT = (MidTom)cmbMidTom.SelectedItem;
-
-            if (midT != null)
-            {
-                Properties.Resources.MidT = midT.Name;
-                mp = new MusicPlayer(Properties.Resources.midT.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Mid_Tom_1.ToString());
-            }
-            mp.Play("MidTom", midT.Name, true);
+            PlayInstrument("h");
         }
 
         private void btnKick_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Kick bass = (Kick)cmbKick.SelectedItem;
-
-            if (bass != null)
-            {
-                Properties.Resources.KickD = bass.Name;
-                mp = new MusicPlayer(Properties.Resources.kickD.ToString());
-            }
-            else
-            {
-                mp = new MusicPlayer(Properties.Resources.Electronic_Kick_1.ToString());
-            }
-            mp.Play("Kick", bass.Name, true);
+            PlayInstrument("i");
         }
+
+
+        // Function Buttons
 
         private void btnSaveKit_Click(object sender, RoutedEventArgs e)
         {
@@ -296,7 +174,10 @@ namespace DrumWPF
             txtInput.Clear();
         }
 
-        public void PlayInstrument(string inp, bool test = false)
+
+        // Keyboard Keys
+
+        public void PlayInstrument(string inp)
         {
 
             switch (inp)
@@ -471,6 +352,9 @@ namespace DrumWPF
             }
 
         }
+
+
+        // switch playmode
 
         public void ActivateMode(string mode)
         {

@@ -192,8 +192,6 @@ namespace DrumWPF
 
         private WpfContext()
         {
-            CrashCymbals = new ObservableCollection<CrashCymbal>(new List<CrashCymbal>() { new CrashCymbal() { Name = "" } });
-
             Task.Run(() => LoadCrashCymbals());
             Task.Run(() => LoadFloorToms());
             Task.Run(() => LoadHighToms());

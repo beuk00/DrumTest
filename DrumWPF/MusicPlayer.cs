@@ -19,17 +19,14 @@ namespace DrumWPF
 
         private long lngVolume = 500;
 
-        bool init = false;
 
         public MusicPlayer(string fileName)
         {
             this.TrackName = fileName;
-            //if (fileName.Contains("\\"))
-            //    this.FileName = fileName;
-            //else
-            //    this.FileName = AppDomain.CurrentDomain.BaseDirectory + fileName;
-
-            //Play("Crash","grxyy",true);
+            if (fileName.Contains("\\"))
+                this.FileName = fileName;
+            else
+                this.FileName = AppDomain.CurrentDomain.BaseDirectory + fileName;
         }
 
 
