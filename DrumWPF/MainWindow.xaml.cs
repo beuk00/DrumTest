@@ -32,7 +32,6 @@ namespace DrumWPF
             gbxLetters.Visibility = Visibility.Hidden;
 
             numDevs = NativeMethods.midiInGetNumDevs();
-            //MessageBox.Show($"You have {numDevs} midi inputdevices");
             if (numDevs != 0)
             {
                 modes.Add("Drum");
@@ -40,7 +39,7 @@ namespace DrumWPF
     
             // default combobox values
 
-                cmbCrashCymbal.SelectedIndex = 0;
+            cmbCrashCymbal.SelectedIndex = 0;
             cmbFloorTom.SelectedIndex = 0;
             cmbHighTom.SelectedIndex = 0;
             cmbClosedHiHat.SelectedIndex = 0;
@@ -50,9 +49,7 @@ namespace DrumWPF
             cmbMidTom.SelectedIndex = 0;
             cmbRideCymbal.SelectedIndex = 0;
             cmbSnareDrum.SelectedIndex = 0;
-
             cmbDrumKit.SelectedIndex = 0;
-
             cmbWhatToUse.SelectedItem = modes[0];
         }
 
@@ -170,6 +167,9 @@ namespace DrumWPF
             }
         }
 
+
+        // Keyboard Keys
+
         private void txtInput_TextChanged(object sender, TextChangedEventArgs e)
         {
             string input = txtInput.Text.ToLower();
@@ -178,9 +178,6 @@ namespace DrumWPF
 
             txtInput.Clear();
         }
-
-
-        // Keyboard Keys
 
         public void PlayInstrument(string inp)
         {
@@ -355,6 +352,7 @@ namespace DrumWPF
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
+                    //NativeMethods.midiInOpen(1, 1, 1, 1, 1);
                     break;
 
                 default: // case "mouse"

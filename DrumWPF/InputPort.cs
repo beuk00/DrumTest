@@ -30,10 +30,6 @@ namespace DrumWPF
         [DllImport("winmm.dll")]
         protected static extern int midiOutClose(int handle);
 
-        
-
-        private delegate void MidiCallBack(int handle, int msg,
-        int instance, int param1, int param2);
 
         private NativeMethods.MidiInProc midiInProc;
         private IntPtr handle;
@@ -118,18 +114,15 @@ namespace DrumWPF
             int dwFlags);
 
         [DllImport("winmm.dll")]
-        internal static extern int midiInStart(
-            IntPtr hMidiIn);
+        internal static extern int midiInStart(IntPtr hMidiIn);
 
         [DllImport("winmm.dll")]
-        internal static extern int midiInStop(
-            IntPtr hMidiIn);
+        internal static extern int midiInStop(IntPtr hMidiIn);
 
         [DllImport("winmm.dll")]
         internal static extern int midiInGetDevsCaps();
 
-        private delegate void MidiCallBack(int handle, int msg,
-            int instance, int param1, int param2);
+        public delegate void MidiCallBack(int handle, int msg, int instance, int param1, int param2);
 
         [StructLayout(LayoutKind.Sequential)]
         public struct MidiOutCaps
