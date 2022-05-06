@@ -13,9 +13,7 @@ namespace DrumWPF
         public bool IsBeingPlayed = false;
         public string FileName;
         public string TrackName;
-
         private long lngVolume = 500;
-
 
         public MusicPlayer(string fileName)
         {
@@ -26,7 +24,6 @@ namespace DrumWPF
                 this.FileName = AppDomain.CurrentDomain.BaseDirectory + fileName;
         }
 
-
         private void PlayWorker()
         {
             StringBuilder sb = new StringBuilder();
@@ -35,18 +32,25 @@ namespace DrumWPF
             IsBeingPlayed = true;
         }
 
+        #region volume
+
         //volume between 0-10
+
         public int GetVolume()
         {
             return (int)this.lngVolume / 100;
         }
 
+
         //volume between 0-10
+
         public void SetVolume(int newvolume)
         {
             this.lngVolume = newvolume * 100;
             //mciSendString("setaudio " + strAlias + " volume to " & lngVolume, "", 0, 0&);
         }
+
+        #endregion
 
         public void Play(string instrumentType, string instrumentName, bool play)
         {

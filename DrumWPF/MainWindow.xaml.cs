@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
+
 namespace DrumWPF
 {
     /// <summary>
@@ -15,7 +16,9 @@ namespace DrumWPF
 
         MusicPlayer mp = null;
 
-        readonly List<string> modes = new List<string>() { "Mouse", "Keyboard", "Drum" };
+        readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
+
+        int numDevs = 0;
 
         public MainWindow()
         {
@@ -28,10 +31,16 @@ namespace DrumWPF
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
 
-
+            numDevs = NativeMethods.midiInGetNumDevs();
+            //MessageBox.Show($"You have {numDevs} midi inputdevices");
+            if (numDevs != 0)
+            {
+                modes.Add("Drum");
+            }
+    
             // default combobox values
 
-            cmbCrashCymbal.SelectedIndex = 0;
+                cmbCrashCymbal.SelectedIndex = 0;
             cmbFloorTom.SelectedIndex = 0;
             cmbHighTom.SelectedIndex = 0;
             cmbClosedHiHat.SelectedIndex = 0;
@@ -46,6 +55,8 @@ namespace DrumWPF
 
             cmbWhatToUse.SelectedItem = modes[0];
         }
+
+        
 
 
         // Drum Buttons
