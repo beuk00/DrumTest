@@ -1,5 +1,8 @@
 ﻿using DrumLib.Models;
+using Sanford.Multimedia.Midi;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -15,6 +18,8 @@ namespace DrumWPF
         WpfContext context = WpfContext.Instance;
 
         MusicPlayer mp = null;
+
+        InputPort inputPort = new InputPort();
 
         readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
 
@@ -342,6 +347,8 @@ namespace DrumWPF
             switch (mode)
             {
                 case "Keyboard":
+                    inputPort.Stop();
+                    inputPort.Close();
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Visible;
                     gbxLetters.Visibility = Visibility.Visible;
@@ -349,18 +356,52 @@ namespace DrumWPF
                     break;
 
                 case "Drum":
+                    inputPort.Open(1);
+                    inputPort.Start();
+                    using (Sanford.Multimedia.Midi.InputDevice Device = new Sanford.Multimedia.Midi.InputDevice(1))
+                    {
+                        //ChannelMessageBuilder builder = new ChannelMessageBuilder();
+
+                        //Device.MessageReceived += Device_MessageReceived;
+
+                        lblDrumInfo.Content = Device.ToString();
+                        //lblDrumInfo.Content = (Device.MessageReceived.ToString()).Trim();
+
+                        //builder.Command = ChannelCommand.NoteOn;
+                        //builder.MidiChannel = 10;
+                        //builder.Data1 = 60;
+                        //builder.Data2 = 127;
+                        //builder.Build();
+
+                        //Device.send(builder.Result);
+
+                        //Thread.Sleep(1000);
+
+                        //builder.Command = ChannelCommand.NoteOff;
+                        //builder.Data2 = 0;
+                        //builder.Build();
+
+                        //Device.Send(builder.Result);
+                    }
+
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
-                    //NativeMethods.midiInOpen(1, 1, 1, 1, 1);
                     break;
 
                 default: // case "mouse"
+                    inputPort.Stop();
+                    inputPort.Close();
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
                     break;
             }
+        }
+
+        private void Device_MessageReceived(IMidiMessage message)
+        {
+            throw new System.NotImplementedException();
         }
 
         private void cmbWhatToUse_SelectionChanged(object sender, SelectionChangedEventArgs e)

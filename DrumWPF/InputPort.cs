@@ -8,29 +8,6 @@ namespace DrumWPF
 {
     public class InputPort
     {
-        [DllImport("winmm.dll")]
-        private static extern long mciSendString(string command,
-        StringBuilder returnValue, int returnLength, IntPtr winHandle);
-
-        [DllImport("winmm.dll")]
-        public static extern int midiOutGetNumDevs();
-
-        [DllImport("winmm.dll")]
-        private static extern int midiOutGetDevCaps(Int32 uDeviceID,
-        ref MidiOutCaps lpMidiOutCaps, UInt32 cbMidiOutCaps);
-
-        [DllImport("winmm.dll")]
-        private static extern int midiOutOpen(ref int handle,
-        int deviceID, MidiCallBack proc, int instance, int flags);
-
-        [DllImport("winmm.dll")]
-        protected static extern int midiOutShortMsg(int handle,
-           int message);
-
-        [DllImport("winmm.dll")]
-        protected static extern int midiOutClose(int handle);
-
-
         private NativeMethods.MidiInProc midiInProc;
         private IntPtr handle;
 
@@ -122,10 +99,14 @@ namespace DrumWPF
         [DllImport("winmm.dll")]
         internal static extern int midiInGetDevsCaps();
 
+        [DllImport("winmm.dll")]
+        private static extern long mciSendString(string command,
+        StringBuilder returnValue, int returnLength, IntPtr winHandle);
+
         public delegate void MidiCallBack(int handle, int msg, int instance, int param1, int param2);
 
         [StructLayout(LayoutKind.Sequential)]
-        public struct MidiOutCaps
+        public struct MidiInCaps
         {
             public UInt16 wMid;
             public UInt16 wPid;

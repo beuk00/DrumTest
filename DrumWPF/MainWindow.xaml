@@ -51,6 +51,7 @@
                         <Label Content="F" HorizontalAlignment="Left" Margin="150,134,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" FontSize="20" Background="#FFFDFCFC" Width="76" HorizontalContentAlignment="Center"/>
                     </Grid>
                 </GroupBox>
+                <Label x:Name="lblDrumInfo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="194"/>
 
             </Grid>
         </GroupBox>
