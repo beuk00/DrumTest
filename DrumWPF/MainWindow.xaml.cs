@@ -1,11 +1,15 @@
 ﻿using DrumLib.Models;
+using Melanchall.DryWetMidi.Multimedia;
+using Sanford.Multimedia;
 using Sanford.Multimedia.Midi;
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+
 
 
 namespace DrumWPF
@@ -24,6 +28,10 @@ namespace DrumWPF
         readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
 
         int numDevs = 0;
+
+       
+
+        private static IInputDevice _inputDevice;
 
         public MainWindow()
         {
@@ -349,6 +357,7 @@ namespace DrumWPF
                 case "Keyboard":
                     inputPort.Stop();
                     inputPort.Close();
+                    (_inputDevice as IDisposable)?.Dispose();
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Visible;
                     gbxLetters.Visibility = Visibility.Visible;
@@ -358,13 +367,14 @@ namespace DrumWPF
                 case "Drum":
                     inputPort.Open(1);
                     inputPort.Start();
-                    using (Sanford.Multimedia.Midi.InputDevice Device = new Sanford.Multimedia.Midi.InputDevice(1))
+
+                    _inputDevice = Melanchall.DryWetMidi.Multimedia.InputDevice.GetByName("Alesis Turbo");
+                    _inputDevice.EventReceived += OnEventReceived;
+                    _inputDevice.StartEventsListening();
+                    MessageBox.Show($"");
+                    using (Sanford.Multimedia.Midi.InputDevice Device = new Sanford.Multimedia.Midi.InputDevice(1))  
                     {
-                        //ChannelMessageBuilder builder = new ChannelMessageBuilder();
-
-                        //Device.MessageReceived += Device_MessageReceived;
-
-                        lblDrumInfo.Content = Device.ToString();
+                        //lblDrumInfo.Content = Device.ToString();
                         //lblDrumInfo.Content = (Device.MessageReceived.ToString()).Trim();
 
                         //builder.Command = ChannelCommand.NoteOn;
@@ -392,11 +402,18 @@ namespace DrumWPF
                 default: // case "mouse"
                     inputPort.Stop();
                     inputPort.Close();
+                    (_inputDevice as IDisposable)?.Dispose();
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
                     break;
             }
+        }
+
+        private static void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
+        {
+            var midiDevice = (Melanchall.DryWetMidi.Multimedia.MidiDevice)sender;
+            MessageBox.Show($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event}");
         }
 
         private void Device_MessageReceived(IMidiMessage message)
