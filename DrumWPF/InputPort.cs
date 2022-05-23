@@ -59,7 +59,8 @@ namespace DrumWPF
             int dwParam1,
             int dwParam2)
         {
-            // Receive messages here
+            
+            
         }
     }
 

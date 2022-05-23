@@ -190,17 +190,17 @@ namespace DrumWPF
 
         private WpfContext()
         {
-            Task.Run(() => LoadCrashCymbals());
-            Task.Run(() => LoadFloorToms());
-            Task.Run(() => LoadHighToms());
-            Task.Run(() => LoadClosedHiHats());
-            Task.Run(() => LoadHiHatControllers());
-            Task.Run(() => LoadOpenHiHats());
-            Task.Run(() => LoadKicks());
-            Task.Run(() => LoadMidToms());
-            Task.Run(() => LoadRideCymbals());
-            Task.Run(() => LoadSnareDrums());
-            Task.Run(() => LoadDrumKits());
+            //Task.Run(() => LoadCrashCymbals());
+            //Task.Run(() => LoadFloorToms());
+            //Task.Run(() => LoadHighToms());
+            //Task.Run(() => LoadClosedHiHats());
+            //Task.Run(() => LoadHiHatControllers());
+            //Task.Run(() => LoadOpenHiHats());
+            //Task.Run(() => LoadKicks());
+            //Task.Run(() => LoadMidToms());
+            //Task.Run(() => LoadRideCymbals());
+            //Task.Run(() => LoadSnareDrums());
+            //Task.Run(() => LoadDrumKits());
         }
 
         private async void LoadCrashCymbals()

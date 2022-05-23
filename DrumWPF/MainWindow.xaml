@@ -52,6 +52,7 @@
                     </Grid>
                 </GroupBox>
                 <Label x:Name="lblDrumInfo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="194"/>
+                <Button x:Name="btnDispose" Content="Dispose" HorizontalAlignment="Left" Margin="654,378,0,0" VerticalAlignment="Top" Click="btnDispose_Click"/>
 
             </Grid>
         </GroupBox>

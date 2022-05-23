@@ -13,8 +13,10 @@
 
   <ItemGroup>
     <PackageReference Include="Melanchall.DryWetMidi" Version="6.0.1" />
+    <PackageReference Include="Microsoft.SqlServer.SqlManagementObjects" Version="161.47008.0" />
     <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
     <PackageReference Include="Sanford.Multimedia.Midi" Version="6.6.2" />
+    <PackageReference Include="Uno.UI" Version="4.2.6" />
   </ItemGroup>
 
   <ItemGroup>
