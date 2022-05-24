@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="InputPort.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="istockphoto-935671156-612x612.jpg" />
     <None Remove="Resources\Crash\Crash-Cymbal-1 %281%29.wav" />
   </ItemGroup>

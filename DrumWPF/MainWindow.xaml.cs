@@ -59,8 +59,6 @@ namespace DrumWPF
             gbxLetters.Visibility = Visibility.Hidden;
 
             numDevs = Melanchall.DryWetMidi.Multimedia.InputDevice.GetAll().Count();
-
-            //numDevs = NativeMethods.midiInGetNumDevs();
             if (numDevs != 0)
             {
                 modes.Add("Drum");
