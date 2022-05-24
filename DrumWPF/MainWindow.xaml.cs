@@ -4,6 +4,7 @@ using Sanford.Multimedia;
 using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -57,7 +58,9 @@ namespace DrumWPF
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
 
-            numDevs = NativeMethods.midiInGetNumDevs();
+            numDevs = Melanchall.DryWetMidi.Multimedia.InputDevice.GetAll().Count();
+
+            //numDevs = NativeMethods.midiInGetNumDevs();
             if (numDevs != 0)
             {
                 modes.Add("Drum");
@@ -343,11 +346,11 @@ namespace DrumWPF
                     break;
 
                 case "Drum":
-                    _inputDevice = Melanchall.DryWetMidi.Multimedia.InputDevice.GetByName("Alesis Turbo");
+                    _inputDevice = Melanchall.DryWetMidi.Multimedia.InputDevice.GetAll().ElementAt(0);
                     _inputDevice.EventReceived += OnEventReceived;
                     _inputDevice.StartEventsListening();
-                    
-                    lblDrumInfo.Content = _inputDevice.ToString();
+
+                    lblDrumInfo.Content = Melanchall.DryWetMidi.Multimedia.InputDevice.GetAll().ElementAt(0).Name;
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
