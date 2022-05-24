@@ -64,7 +64,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbCrashCymbal" ItemsSource="{Binding CrashCymbals}" HorizontalAlignment="Left" Margin="122,129,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.5,-0.408" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbCrashCymbal" ItemsSource="{Binding CrashCymbals}" HorizontalAlignment="Left" Margin="122,129,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.5,-0.408" Height="22" FontSize="10" SelectionChanged="cmbCrashCymbal_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -73,7 +73,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbClosedHiHat" ItemsSource="{Binding ClosedHiHats}" HorizontalAlignment="Left" Margin="122,156,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbClosedHiHat" ItemsSource="{Binding ClosedHiHats}" HorizontalAlignment="Left" Margin="122,156,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbClosedHiHat_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -82,7 +82,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbFloorTom" ItemsSource="{Binding FloorToms}" HorizontalAlignment="Left" Margin="122,183,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbFloorTom" ItemsSource="{Binding FloorToms}" HorizontalAlignment="Left" Margin="122,183,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbFloorTom_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -91,7 +91,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbOpenHiHat" ItemsSource="{Binding OpenHiHats}" HorizontalAlignment="Left" Margin="122,210,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbOpenHiHat" ItemsSource="{Binding OpenHiHats}" HorizontalAlignment="Left" Margin="122,210,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbOpenHiHat_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -100,7 +100,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbSnareDrum" ItemsSource="{Binding SnareDrums}" HorizontalAlignment="Left" Margin="122,237,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbSnareDrum" ItemsSource="{Binding SnareDrums}" HorizontalAlignment="Left" Margin="122,237,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbSnareDrum_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -109,7 +109,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbHiHatController" ItemsSource="{Binding HiHatControllers}" HorizontalAlignment="Left" Margin="122,264,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbHiHatController" ItemsSource="{Binding HiHatControllers}" HorizontalAlignment="Left" Margin="122,264,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbHiHatController_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -118,7 +118,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbMidTom" ItemsSource="{Binding MidToms}" HorizontalAlignment="Left" Margin="122,291,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbMidTom" ItemsSource="{Binding MidToms}" HorizontalAlignment="Left" Margin="122,291,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbMidTom_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -127,7 +127,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbKick" ItemsSource="{Binding Kicks}" HorizontalAlignment="Left" Margin="122,318,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbKick" ItemsSource="{Binding Kicks}" HorizontalAlignment="Left" Margin="122,318,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbKick_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -136,7 +136,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbRideCymbal" ItemsSource="{Binding RideCymbals}" HorizontalAlignment="Left" Margin="122,345,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbRideCymbal" ItemsSource="{Binding RideCymbals}" HorizontalAlignment="Left" Margin="122,345,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbRideCymbal_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -145,7 +145,7 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <ComboBox x:Name="cmbHighTom" ItemsSource="{Binding HighToms}" HorizontalAlignment="Left" Margin="122,372,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10">
+        <ComboBox x:Name="cmbHighTom" ItemsSource="{Binding HighToms}" HorizontalAlignment="Left" Margin="122,372,0,0" VerticalAlignment="Top" Width="138" Height="22" FontSize="10" SelectionChanged="cmbHighTom_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>

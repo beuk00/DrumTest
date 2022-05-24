@@ -23,13 +23,26 @@ namespace DrumWPF
 
         MusicPlayer mp = null;
 
-        InputPort inputPort = new InputPort();
 
         readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
 
         int numDevs = 0;
 
-       
+       // default sounds
+
+        public delegate void test(string instrument);
+
+        string RideCymbal = "Ensoniq-SQ-1-Ride-Cymbal";
+        string CrashCymbal = "Crash-Cymbal-1 (1)";
+        string FloorTom = "Floor-Tom-1";
+        string HighTom = "Hi-Tom-1";
+        string MidTom = "Mid-Tom-1";
+        string SnareDrum = "Ensoniq-ESQ-1-Snare";
+        string KickPedal = "Bass-Drum-1";
+        string OpenHiHat = "Open-Hi-Hat-1";
+        string ClosedHiHat = "Closed-Hi-Hat-1";
+        string HiHatPedal = "Pedal-Hi-Hat-1";
+
 
         private static IInputDevice _inputDevice;
 
@@ -197,51 +210,43 @@ namespace DrumWPF
             switch (inp)
             {
                 case "a":
-                    CrashCymbal crashC = (CrashCymbal)cmbCrashCymbal.SelectedItem;
-
-                    if (crashC != null)
+                    if (CrashCymbal != null)
                     {
 
-                        Properties.Resources.CrashCym = crashC.Name;
+                        Properties.Resources.CrashCym = CrashCymbal;
 
                         mp = new MusicPlayer(Properties.Resources.crashCym.ToString());
-                        mp.Play("Crash", crashC.Name, true);
+                        mp.Play("Crash", CrashCymbal, true);
                     }
                     break;
 
                 case "b":
-                    FloorTom floorT = (FloorTom)cmbFloorTom.SelectedItem;
-
-                    if (floorT != null)
+                    if (FloorTom != null)
                     {
-                        Properties.Resources.FloorT = floorT.Name;
+                        Properties.Resources.FloorT = FloorTom;
 
                         mp = new MusicPlayer(Properties.Resources.floorT.ToString());
-                        mp.Play("FloorTom", floorT.Name, true);
+                        mp.Play("FloorTom", FloorTom, true);
                     }
                     break;
 
                 case "c":
-                    SnareDrum snare = (SnareDrum)cmbSnareDrum.SelectedItem;
-
-                    if (snare != null)
+                    if (SnareDrum != null)
                     {
-                        Properties.Resources.Snare = snare.Name;
+                        Properties.Resources.Snare = SnareDrum;
 
                         mp = new MusicPlayer(Properties.Resources.snare.ToString());
-                        mp.Play("Snare", snare.Name, true);
+                        mp.Play("Snare", SnareDrum, true);
                     }
                     break;
 
                 case "d":
-                    HiHatController pedal = (HiHatController)cmbHiHatController.SelectedItem;
-
-                    if (pedal != null)
+                    if (HiHatPedal != null)
                     {
-                        Properties.Resources.HiHatPedal = pedal.Name;
+                        Properties.Resources.HiHatPedal = HiHatPedal;
 
                         mp = new MusicPlayer(Properties.Resources.hiHatPedal.ToString());
-                        mp.Play("HiHat controller", pedal.Name, true);
+                        mp.Play("HiHat controller", HiHatPedal, true);
                     }
 
                     if (btnClosedHH.Content.ToString() == "OpenHH")
@@ -257,93 +262,68 @@ namespace DrumWPF
                 case "e":
                     if (btnClosedHH.Content.ToString() == "ClosedHH")
                     {
-                        ClosedHiHat closed = (ClosedHiHat)cmbClosedHiHat.SelectedItem;
-
-                        if (closed != null)
+                        if (ClosedHiHat != null)
                         {
-                            Properties.Resources.CHiHat = closed.Name;
+                            Properties.Resources.CHiHat = ClosedHiHat;
 
                             mp = new MusicPlayer(Properties.Resources.cHiHat.ToString());
-                            mp.Play("HiHat closed", closed.Name, true);
+                            mp.Play("HiHat closed", ClosedHiHat, true);
                         }
                     }
                     else
                     {
-                        OpenHiHat open = (OpenHiHat)cmbOpenHiHat.SelectedItem;
-
-                        if (open != null)
+                        if (OpenHiHat != null)
                         {
-                            Properties.Resources.OHiHat = open.Name;
+                            Properties.Resources.OHiHat = OpenHiHat;
 
                             mp = new MusicPlayer(Properties.Resources.oHiHat.ToString());
-                            mp.Play("HiHat open", open.Name, true);
+                            mp.Play("HiHat open", OpenHiHat, true);
                         }
                     }
                     break;
 
                 case "f":
-                    HighTom highT = (HighTom)cmbHighTom.SelectedItem;
-
-                    if (highT != null)
+                    if (HighTom != null)
                     {
-                        Properties.Resources.HighT = highT.Name;
+                        Properties.Resources.HighT = HighTom;
 
                         mp = new MusicPlayer(Properties.Resources.highT.ToString());
-                        mp.Play("HighTom", highT.Name, true);
+                        mp.Play("HighTom", HighTom, true);
                     }
                     break;
 
                 case "g":
-                    RideCymbal rideC = (RideCymbal)cmbRideCymbal.SelectedItem;
-
-                    if (rideC != null)
+                    if (RideCymbal != null)
                     {
-                        Properties.Resources.RideCym = rideC.Name;
+                        Properties.Resources.RideCym = RideCymbal;
 
                         mp = new MusicPlayer(Properties.Resources.rideCym.ToString());
-                        mp.Play("Ride", rideC.Name, true);
+                        mp.Play("Ride", RideCymbal, true);
                     }
                     break;
 
                 case "h":
-                    MidTom midT = (MidTom)cmbMidTom.SelectedItem;
-
-                    if (midT != null)
+                    if (MidTom != null)
                     {
-                        Properties.Resources.MidT = midT.Name;
+                        Properties.Resources.MidT = MidTom;
 
                         mp = new MusicPlayer(Properties.Resources.midT.ToString());
-                        mp.Play("MidTom", midT.Name, true);
+                        mp.Play("MidTom",MidTom, true);
                     }
                     break;
 
                 case "i":
-                    Kick bass = (Kick)cmbKick.SelectedItem;
-
-                    if (bass != null)
+                    if (KickPedal != null)
                     {
-                        Properties.Resources.KickD = bass.Name;
+                        Properties.Resources.KickD = KickPedal;
 
                         mp = new MusicPlayer(Properties.Resources.kickD.ToString());
-                        mp.Play("Kick", bass.Name, true);
+                        mp.Play("Kick", KickPedal, true);
                     }
                     break;
 
                 default: // all other keys
                     break;
-            }
-        }
-
-        public void SelectPlay(object instrument, string namePath, string item)
-        {
-            var realInstrument = instrument.GetType();
-
-            if (realInstrument != null)
-            {
-                Properties.Resources.KickD = realInstrument.Name;
-
-                mp = new MusicPlayer(Properties.Resources.kickD.ToString());
-                mp.Play(namePath, realInstrument.Name, true);
             }
         }
 
@@ -355,8 +335,6 @@ namespace DrumWPF
             switch (mode)
             {
                 case "Keyboard":
-                    inputPort.Stop();
-                    inputPort.Close();
                     (_inputDevice as IDisposable)?.Dispose();
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Visible;
@@ -365,43 +343,17 @@ namespace DrumWPF
                     break;
 
                 case "Drum":
-                    inputPort.Open(1);
-                    inputPort.Start();
-
                     _inputDevice = Melanchall.DryWetMidi.Multimedia.InputDevice.GetByName("Alesis Turbo");
                     _inputDevice.EventReceived += OnEventReceived;
                     _inputDevice.StartEventsListening();
-                    MessageBox.Show($"");
-                    using (Sanford.Multimedia.Midi.InputDevice Device = new Sanford.Multimedia.Midi.InputDevice(1))  
-                    {
-                        //lblDrumInfo.Content = Device.ToString();
-                        //lblDrumInfo.Content = (Device.MessageReceived.ToString()).Trim();
-
-                        //builder.Command = ChannelCommand.NoteOn;
-                        //builder.MidiChannel = 10;
-                        //builder.Data1 = 60;
-                        //builder.Data2 = 127;
-                        //builder.Build();
-
-                        //Device.send(builder.Result);
-
-                        //Thread.Sleep(1000);
-
-                        //builder.Command = ChannelCommand.NoteOff;
-                        //builder.Data2 = 0;
-                        //builder.Build();
-
-                        //Device.Send(builder.Result);
-                    }
-
+                    
+                    lblDrumInfo.Content = _inputDevice.ToString();
                     gbxButtons.IsEnabled = false;
                     txtInput.Visibility = Visibility.Hidden;
                     gbxLetters.Visibility = Visibility.Hidden;
                     break;
 
                 default: // case "mouse"
-                    inputPort.Stop();
-                    inputPort.Close();
                     (_inputDevice as IDisposable)?.Dispose();
                     gbxButtons.IsEnabled = true;
                     txtInput.Visibility = Visibility.Hidden;
@@ -410,20 +362,126 @@ namespace DrumWPF
             }
         }
 
-        private static void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
+        // recive DrumStrokes
+
+        private void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
         {
             var midiDevice = (Melanchall.DryWetMidi.Multimedia.MidiDevice)sender;
-            MessageBox.Show($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event}");
-        }
+            if (e.Event.EventType != Melanchall.DryWetMidi.Core.MidiEventType.TimingClock)
+            {
+                Console.WriteLine($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event}");
 
-        private void Device_MessageReceived(IMidiMessage message)
-        {
-            throw new System.NotImplementedException();
+                switch (e.Event.ToString().Substring(e.Event.ToString().IndexOf("(") + 1, e.Event.ToString().IndexOf(",") - e.Event.ToString().IndexOf("(") - 1))
+                {
+                    case "51": // RideCymbal
+                        test g = PlayInstrument;
+                        g.Invoke("g");
+                        break;
+
+                    case "49": // CrashCymbal
+                        test a = PlayInstrument;
+                        a.Invoke("a");
+                        break;
+
+                    case "42": // ClosedHiHat
+                    case "46": // OpenHiHat
+                        test ee = PlayInstrument;
+                        ee.Invoke("e");
+                        break;
+
+                    case "44": // HiHatController
+                        test d = PlayInstrument;
+                        d.Invoke("d");
+                        break;
+
+                    case "48": // HighTom
+                        test f = PlayInstrument;
+                        f.Invoke("f");
+                        break;
+
+                    case "45": // MidTom
+                        test h = PlayInstrument;
+                        h.Invoke("h");
+                        break;
+
+                    case "43": // FloorTom
+                        test b = PlayInstrument;
+                        b.Invoke("b");
+                        break;
+
+                    case "38": // SnareDrum
+                        test c = PlayInstrument;
+                        c.Invoke("c");
+                        break;
+
+                    case "35": // Kick
+                        test i  = PlayInstrument;
+                        i.Invoke("i");
+                        break;
+
+                    default:
+                        break;
+                }
+                
+            }
+            
         }
+        
+        // change item comboboxen
 
         private void cmbWhatToUse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ActivateMode(cmbWhatToUse.SelectedItem.ToString());
+        }
+
+        private void cmbCrashCymbal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CrashCymbal = ((CrashCymbal)cmbCrashCymbal.SelectedItem).Name;
+        }
+
+        private void cmbRideCymbal_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RideCymbal = ((RideCymbal)cmbRideCymbal.SelectedItem).Name;
+        }
+
+        private void cmbClosedHiHat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClosedHiHat = ((ClosedHiHat)cmbClosedHiHat.SelectedItem).Name;
+        }
+
+        private void cmbFloorTom_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            FloorTom = ((FloorTom)cmbFloorTom.SelectedItem).Name;
+        }
+
+        private void cmbOpenHiHat_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            OpenHiHat = ((OpenHiHat)cmbOpenHiHat.SelectedItem).Name;
+        }
+
+        private void cmbSnareDrum_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SnareDrum = ((SnareDrum)cmbSnareDrum.SelectedItem).Name;
+        }
+
+        private void cmbHiHatController_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            HiHatPedal = ((HiHatController)cmbHiHatController.SelectedItem).Name;
+        }
+
+        private void cmbMidTom_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MidTom = ((MidTom)cmbMidTom.SelectedItem).Name;
+        }
+
+        private void cmbKick_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            KickPedal = ((Kick)cmbKick.SelectedItem).Name;
+        }
+
+        private void cmbHighTom_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            HighTom = ((HighTom)cmbHighTom.SelectedItem).Name;
         }
     }
 }
