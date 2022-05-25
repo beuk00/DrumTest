@@ -52,7 +52,7 @@
                     </Grid>
                 </GroupBox>
                 <Label x:Name="lblDrumInfo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="194"/>
-                <ProgressBar HorizontalAlignment="Left" Height="31" Margin="521,368,0,0" VerticalAlignment="Top" Width="183"/>
+                <ProgressBar HorizontalAlignment="Left" Height="31" Margin="463,16,0,0" VerticalAlignment="Top" Width="241"/>
 
             </Grid>
         </GroupBox>
