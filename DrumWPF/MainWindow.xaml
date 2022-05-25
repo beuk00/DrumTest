@@ -52,6 +52,7 @@
                     </Grid>
                 </GroupBox>
                 <Label x:Name="lblDrumInfo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="194"/>
+                <ProgressBar HorizontalAlignment="Left" Height="31" Margin="521,368,0,0" VerticalAlignment="Top" Width="183"/>
 
             </Grid>
         </GroupBox>
@@ -169,6 +170,7 @@
         <Label Content="HighTom" HorizontalAlignment="Left" Margin="15,372,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10"/>
         <Label Content="Play Mode" HorizontalAlignment="Left" Margin="15,15,0,0" VerticalAlignment="Top" Width="120" Height="22" FontSize="10" RenderTransformOrigin="0.5,0.593"/>
         <Label Content="DrumKit SetUp" HorizontalAlignment="Left" Margin="75,42,0,0" VerticalAlignment="Top" Height="27" RenderTransformOrigin="0.869,0.32" Width="94" FontSize="10" FontWeight="Bold"/>
+        <ProgressBar Height="10" Width="100"/>
 
     </Grid>
 </Window>

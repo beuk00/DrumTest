@@ -1,7 +1,5 @@
 ﻿using DrumLib.Models;
 using Melanchall.DryWetMidi.Multimedia;
-using Sanford.Multimedia;
-using Sanford.Multimedia.Midi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
