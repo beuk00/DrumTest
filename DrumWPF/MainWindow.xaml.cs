@@ -22,15 +22,16 @@ namespace DrumWPF
 
         MusicPlayer mp = null;
 
+        public delegate void test(string instrument);
+
         private static IInputDevice _inputDevice;
 
         readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
 
         int numDevs = 0;
 
-       // default sounds
 
-        public delegate void test(string instrument);
+       // default sounds
 
         string RideCymbal = "Ensoniq-SQ-1-Ride-Cymbal";
         string CrashCymbal = "Crash-Cymbal-1 (1)";
@@ -53,6 +54,9 @@ namespace DrumWPF
             
             txtInput.Visibility = Visibility.Hidden;
             gbxLetters.Visibility = Visibility.Hidden;
+
+
+            // check drum connected
 
             numDevs = Melanchall.DryWetMidi.Multimedia.InputDevice.GetAll().Count();
             if (numDevs != 0)
@@ -359,6 +363,7 @@ namespace DrumWPF
             }
         }
 
+
         // recive DrumStrokes
 
         private void OnEventReceived(object sender, MidiEventReceivedEventArgs e)
@@ -481,10 +486,12 @@ namespace DrumWPF
             HighTom = ((HighTom)cmbHighTom.SelectedItem).Name;
         }
 
+
+        // change drumkit
+
         private void cmbDrumKit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DrumKit Kit = (DrumKit)cmbDrumKit.SelectedItem;
-            SetDrumKit(Kit);
+            SetDrumKit((DrumKit)cmbDrumKit.SelectedItem);
         }
 
         public void SetDrumKit(DrumKit kit)
