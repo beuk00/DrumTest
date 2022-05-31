@@ -52,8 +52,6 @@
                     </Grid>
                 </GroupBox>
                 <Label x:Name="lblDrumInfo" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="194"/>
-                <ProgressBar HorizontalAlignment="Left" Height="31" Margin="463,16,0,0" VerticalAlignment="Top" Width="241"/>
-
             </Grid>
         </GroupBox>
         <ComboBox Name="cmbDrumKit" ItemsSource="{Binding DrumKits}" Margin="122,69,0,0" VerticalAlignment="Top" Height="22" HorizontalAlignment="Left" Width="138" RenderTransformOrigin="0.5,0.547" FontSize="10" SelectionChanged="cmbDrumKit_SelectionChanged">

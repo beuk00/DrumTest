@@ -60,10 +60,6 @@ namespace DrumWPF
                 modes.Add("Drum");
             }
 
-            //DrumKit drumKit = context.DrumKits.First();
-            //cmbDrumKit.SelectedIndex = 0;
-            //DrumKit kit = (DrumKit)cmbDrumKit.SelectedItem;
-
             // default combobox values
 
             cmbCrashCymbal.SelectedIndex = 0;
@@ -488,20 +484,21 @@ namespace DrumWPF
         private void cmbDrumKit_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             DrumKit Kit = (DrumKit)cmbDrumKit.SelectedItem;
+            SetDrumKit(Kit);
         }
 
         public void SetDrumKit(DrumKit kit)
         {
-            ClosedHiHat = kit.ClosedHiHat.Name;
-            OpenHiHat = kit.OpenHiHat.Name;
-            RideCymbal = kit.RideCymbal.Name;
-            SnareDrum = kit.SnareDrum.Name;
-            MidTom = kit.MidTom.Name;
-            RideCymbal = kit.RideCymbal.Name;
-            HighTom = kit.HighTom.Name;
-            FloorTom = kit.FloorTom.Name;
-            KickPedal = kit.Kick.Name;
-            HiHatPedal = kit.HiHatController.Name;
+            cmbClosedHiHat.SelectedIndex = kit.ClosedHiHatId;
+            cmbOpenHiHat.SelectedIndex = kit.OpenHiHatId;
+            cmbRideCymbal.SelectedIndex = kit.RideCymbalId;
+            cmbSnareDrum.SelectedIndex = kit.SnareDrumId;
+            cmbMidTom.SelectedIndex = kit.MidTomId;
+            cmbCrashCymbal.SelectedIndex = kit.CrashCymbalId;
+            cmbHighTom.SelectedIndex = kit.HighTomId;
+            cmbFloorTom.SelectedIndex = kit.FloorTomId;
+            cmbKick.SelectedIndex = kit.KickId;
+            cmbHiHatController.SelectedIndex = kit.HiHatControllerId;
         }
     }
 }
