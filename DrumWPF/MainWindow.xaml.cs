@@ -22,6 +22,7 @@ namespace DrumWPF
 
         MusicPlayer mp = null;
 
+        private static IInputDevice _inputDevice;
 
         readonly List<string> modes = new List<string>() { "Mouse", "Keyboard" };
 
@@ -42,9 +43,6 @@ namespace DrumWPF
         string ClosedHiHat = "Closed-Hi-Hat-1";
         string HiHatPedal = "Pedal-Hi-Hat-1";
 
-
-        private static IInputDevice _inputDevice;
-
         public MainWindow()
         {
             InitializeComponent();
@@ -61,7 +59,11 @@ namespace DrumWPF
             {
                 modes.Add("Drum");
             }
-    
+
+            //DrumKit drumKit = context.DrumKits.First();
+            //cmbDrumKit.SelectedIndex = 0;
+            //DrumKit kit = (DrumKit)cmbDrumKit.SelectedItem;
+
             // default combobox values
 
             cmbCrashCymbal.SelectedIndex = 0;
@@ -368,7 +370,7 @@ namespace DrumWPF
             var midiDevice = (Melanchall.DryWetMidi.Multimedia.MidiDevice)sender;
             if (e.Event.EventType != Melanchall.DryWetMidi.Core.MidiEventType.TimingClock)
             {
-                Console.WriteLine($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event}");
+                //Console.WriteLine($"Event received from '{midiDevice.Name}' at {DateTime.Now}: {e.Event}");
 
                 switch (e.Event.ToString().Substring(e.Event.ToString().IndexOf("(") + 1, e.Event.ToString().IndexOf(",") - e.Event.ToString().IndexOf("(") - 1))
                 {
@@ -481,6 +483,25 @@ namespace DrumWPF
         private void cmbHighTom_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             HighTom = ((HighTom)cmbHighTom.SelectedItem).Name;
+        }
+
+        private void cmbDrumKit_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DrumKit Kit = (DrumKit)cmbDrumKit.SelectedItem;
+        }
+
+        public void SetDrumKit(DrumKit kit)
+        {
+            ClosedHiHat = kit.ClosedHiHat.Name;
+            OpenHiHat = kit.OpenHiHat.Name;
+            RideCymbal = kit.RideCymbal.Name;
+            SnareDrum = kit.SnareDrum.Name;
+            MidTom = kit.MidTom.Name;
+            RideCymbal = kit.RideCymbal.Name;
+            HighTom = kit.HighTom.Name;
+            FloorTom = kit.FloorTom.Name;
+            KickPedal = kit.Kick.Name;
+            HiHatPedal = kit.HiHatController.Name;
         }
     }
 }

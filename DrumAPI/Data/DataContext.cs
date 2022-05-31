@@ -224,6 +224,22 @@ namespace DrumAPI.Data
                     rideCymbalId : 1,
                     snareDrumId : 1
 
+                ),
+
+                new DrumKit
+                (
+                    "Rock Kit",
+                    id : 2,
+                    closedHiHatId : 2,
+                    openHiHatId : 2,
+                    crashCymbalId : 2,
+                    floorTomId : 2,
+                    highTomId : 2,
+                    hiHatControllerId : 2,
+                    kickId : 2,
+                    midTomId : 2,
+                    rideCymbalId : 2,
+                    snareDrumId : 2
                 )
             };
 

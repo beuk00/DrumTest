@@ -379,6 +379,11 @@ namespace DrumAPI.Migrations
                 columns: new[] { "Id", "ClosedHiHatId", "CrashCymbalId", "FloorTomId", "HiHatControllerId", "HighTomId", "KickId", "MidTomId", "Name", "OpenHiHatId", "RideCymbalId", "SnareDrumId" },
                 values: new object[] { 1, 1, 1, 1, 1, 1, 1, 1, "Standard", 1, 1, 1 });
 
+            migrationBuilder.InsertData(
+                table: "DrumKits",
+                columns: new[] { "Id", "ClosedHiHatId", "CrashCymbalId", "FloorTomId", "HiHatControllerId", "HighTomId", "KickId", "MidTomId", "Name", "OpenHiHatId", "RideCymbalId", "SnareDrumId" },
+                values: new object[] { 2, 2, 2, 2, 2, 2, 2, 2, "Rock Kit", 2, 2, 2 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_DrumKits_ClosedHiHatId",
                 table: "DrumKits",

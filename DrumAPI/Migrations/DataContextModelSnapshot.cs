@@ -219,6 +219,21 @@ namespace DrumAPI.Migrations
                             OpenHiHatId = 1,
                             RideCymbalId = 1,
                             SnareDrumId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ClosedHiHatId = 2,
+                            CrashCymbalId = 2,
+                            FloorTomId = 2,
+                            HiHatControllerId = 2,
+                            HighTomId = 2,
+                            KickId = 2,
+                            MidTomId = 2,
+                            Name = "Rock Kit",
+                            OpenHiHatId = 2,
+                            RideCymbalId = 2,
+                            SnareDrumId = 2
                         });
                 });
 
