@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DrumAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220530101758_initial")]
+    [Migration("20220531145414_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

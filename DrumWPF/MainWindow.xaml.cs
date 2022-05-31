@@ -489,16 +489,16 @@ namespace DrumWPF
 
         public void SetDrumKit(DrumKit kit)
         {
-            cmbClosedHiHat.SelectedIndex = kit.ClosedHiHatId;
-            cmbOpenHiHat.SelectedIndex = kit.OpenHiHatId;
-            cmbRideCymbal.SelectedIndex = kit.RideCymbalId;
-            cmbSnareDrum.SelectedIndex = kit.SnareDrumId;
-            cmbMidTom.SelectedIndex = kit.MidTomId;
-            cmbCrashCymbal.SelectedIndex = kit.CrashCymbalId;
-            cmbHighTom.SelectedIndex = kit.HighTomId;
-            cmbFloorTom.SelectedIndex = kit.FloorTomId;
-            cmbKick.SelectedIndex = kit.KickId;
-            cmbHiHatController.SelectedIndex = kit.HiHatControllerId;
+            cmbClosedHiHat.SelectedIndex = kit.ClosedHiHatId -1;
+            cmbOpenHiHat.SelectedIndex = kit.OpenHiHatId -1;
+            cmbRideCymbal.SelectedIndex = kit.RideCymbalId -1;
+            cmbSnareDrum.SelectedIndex = kit.SnareDrumId -1;
+            cmbMidTom.SelectedIndex = kit.MidTomId -1;
+            cmbCrashCymbal.SelectedIndex = kit.CrashCymbalId -1;
+            cmbHighTom.SelectedIndex = kit.HighTomId -1;
+            cmbFloorTom.SelectedIndex = kit.FloorTomId -1;
+            cmbKick.SelectedIndex = kit.KickId -1;
+            cmbHiHatController.SelectedIndex = kit.HiHatControllerId -1;
         }
     }
 }
